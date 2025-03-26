@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,11 @@ namespace SystemWhse
             random = new Random();
             btnCloseChildForm.Visible = false;
         }
+        [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.dll", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int IParam);
 
         //Methods
         private Color SelectThemeColor()
@@ -209,6 +215,17 @@ namespace SystemWhse
             Navbar.BackColor = Color.FromArgb(218, 219, 221);
             currentButton = null;
             btnCloseChildForm.Visible = false;
+        }
+
+        private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Navbar_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

@@ -54,9 +54,12 @@
             this.sidebarTransition = new System.Windows.Forms.Timer(this.components);
             this.panelDesktopPane = new System.Windows.Forms.Panel();
             this.btnCloseChildForm = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Navbar.SuspendLayout();
+            this.panelDesktopPane.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // sidebar
@@ -241,6 +244,7 @@
             this.Navbar.Size = new System.Drawing.Size(1093, 43);
             this.Navbar.TabIndex = 1;
             this.Navbar.Text = "toolStrip1";
+            this.Navbar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Navbar_MouseDown);
             // 
             // Menu
             // 
@@ -346,6 +350,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelDesktopPane.BackColor = System.Drawing.Color.Transparent;
+            this.panelDesktopPane.Controls.Add(this.pictureBox2);
             this.panelDesktopPane.Location = new System.Drawing.Point(199, 43);
             this.panelDesktopPane.Name = "panelDesktopPane";
             this.panelDesktopPane.Size = new System.Drawing.Size(893, 536);
@@ -364,6 +369,18 @@
             this.btnCloseChildForm.TabIndex = 3;
             this.btnCloseChildForm.UseVisualStyleBackColor = false;
             this.btnCloseChildForm.Click += new System.EventHandler(this.btnCloseChildForm_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(196, 110);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(542, 300);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
             // 
             // Dashboard
             // 
@@ -384,6 +401,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Navbar.ResumeLayout(false);
             this.Navbar.PerformLayout();
+            this.panelDesktopPane.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -414,5 +433,6 @@
         private System.Windows.Forms.Panel panelDesktopPane;
         private System.Windows.Forms.ToolStripLabel lblTitle;
         private System.Windows.Forms.Button btnCloseChildForm;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
