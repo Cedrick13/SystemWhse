@@ -188,5 +188,10 @@ namespace SystemWhse
         {
 
         }
+
+        private void panelDesktopPane_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

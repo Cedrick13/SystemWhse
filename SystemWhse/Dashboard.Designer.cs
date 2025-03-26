@@ -341,10 +341,14 @@
             // 
             // panelDesktopPane
             // 
-            this.panelDesktopPane.Location = new System.Drawing.Point(199, 44);
+            this.panelDesktopPane.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelDesktopPane.Location = new System.Drawing.Point(199, 43);
             this.panelDesktopPane.Name = "panelDesktopPane";
-            this.panelDesktopPane.Size = new System.Drawing.Size(893, 535);
+            this.panelDesktopPane.Size = new System.Drawing.Size(893, 536);
             this.panelDesktopPane.TabIndex = 2;
+            this.panelDesktopPane.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktopPane_Paint);
             // 
             // Dashboard
             // 
