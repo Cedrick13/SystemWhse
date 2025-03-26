@@ -42,7 +42,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.Navbar = new System.Windows.Forms.ToolStrip();
             this.Menu = new System.Windows.Forms.ToolStripButton();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.IbITitle = new System.Windows.Forms.ToolStripLabel();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.returnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transferToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -226,7 +226,7 @@
             this.Navbar.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.Navbar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Menu,
-            this.toolStripLabel1,
+            this.IbITitle,
             this.toolStripDropDownButton1,
             this.toolStripDropDownButton2,
             this.toolStripDropDownButton3,
@@ -249,12 +249,12 @@
             this.Menu.Size = new System.Drawing.Size(23, 40);
             this.Menu.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
-            // toolStripLabel1
+            // IbITitle
             // 
-            this.toolStripLabel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(45, 40);
-            this.toolStripLabel1.Text = "Home";
+            this.IbITitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IbITitle.Name = "IbITitle";
+            this.IbITitle.Size = new System.Drawing.Size(47, 40);
+            this.IbITitle.Text = "HOME";
             // 
             // toolStripDropDownButton1
             // 
@@ -381,7 +381,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripLabel IbITitle;
         private System.Windows.Forms.ToolStripButton FullScreen;
     }
 }
