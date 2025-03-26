@@ -207,7 +207,7 @@
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Image = global::SystemWhse.Properties.Resources.apps;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(-3, 67);
+            this.button1.Location = new System.Drawing.Point(0, 67);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(199, 43);
             this.button1.TabIndex = 2;

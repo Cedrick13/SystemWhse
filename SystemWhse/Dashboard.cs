@@ -29,7 +29,7 @@ namespace SystemWhse
         {
             int index = random.Next(ThemeColor.ColorList.Count);
             while (tempIndex == index) {
-                random.Next(ThemeColor.ColorList.Count);
+               index= random.Next(ThemeColor.ColorList.Count);
             }
             tempIndex = index;
             string color = ThemeColor.ColorList[index];
