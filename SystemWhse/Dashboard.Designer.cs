@@ -42,7 +42,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.Navbar = new System.Windows.Forms.ToolStrip();
             this.Menu = new System.Windows.Forms.ToolStripButton();
-            this.IbITitle = new System.Windows.Forms.ToolStripLabel();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.returnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transferToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,8 +49,10 @@
             this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripDropDownButton4 = new System.Windows.Forms.ToolStripDropDownButton();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sidebarTransition = new System.Windows.Forms.Timer(this.components);
             this.FullScreen = new System.Windows.Forms.ToolStripButton();
+            this.sidebarTransition = new System.Windows.Forms.Timer(this.components);
+            this.panelDesktopPane = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.ToolStripLabel();
             this.sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Navbar.SuspendLayout();
@@ -226,10 +227,10 @@
             this.Navbar.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.Navbar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Menu,
-            this.IbITitle,
             this.toolStripDropDownButton1,
             this.toolStripDropDownButton2,
             this.toolStripDropDownButton3,
+            this.lblTitle,
             this.toolStripDropDownButton4,
             this.FullScreen});
             this.Navbar.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
@@ -249,13 +250,6 @@
             this.Menu.Size = new System.Drawing.Size(23, 40);
             this.Menu.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
-            // IbITitle
-            // 
-            this.IbITitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IbITitle.Name = "IbITitle";
-            this.IbITitle.Size = new System.Drawing.Size(47, 40);
-            this.IbITitle.Text = "HOME";
-            // 
             // toolStripDropDownButton1
             // 
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -273,14 +267,14 @@
             // 
             this.returnToolStripMenuItem.Image = global::SystemWhse.Properties.Resources.return_57;
             this.returnToolStripMenuItem.Name = "returnToolStripMenuItem";
-            this.returnToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.returnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.returnToolStripMenuItem.Text = "Return";
             // 
             // transferToolStripMenuItem
             // 
             this.transferToolStripMenuItem.Image = global::SystemWhse.Properties.Resources._876784;
             this.transferToolStripMenuItem.Name = "transferToolStripMenuItem";
-            this.transferToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.transferToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.transferToolStripMenuItem.Text = "Transfer";
             // 
             // toolStripDropDownButton2
@@ -319,14 +313,9 @@
             // 
             this.logoutToolStripMenuItem.Image = global::SystemWhse.Properties.Resources._141_1411375_logout_free_icon_3_switch_removebg_preview;
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
-            // 
-            // sidebarTransition
-            // 
-            this.sidebarTransition.Interval = 10;
-            this.sidebarTransition.Tick += new System.EventHandler(this.sidebarTransition_Tick);
             // 
             // FullScreen
             // 
@@ -336,7 +325,26 @@
             this.FullScreen.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.FullScreen.Name = "FullScreen";
             this.FullScreen.Size = new System.Drawing.Size(23, 40);
-            this.FullScreen.Text = "toolStripButton2";
+            this.FullScreen.Text = "fullscreen";
+            // 
+            // sidebarTransition
+            // 
+            this.sidebarTransition.Interval = 10;
+            this.sidebarTransition.Tick += new System.EventHandler(this.sidebarTransition_Tick);
+            // 
+            // panelDesktopPane
+            // 
+            this.panelDesktopPane.Location = new System.Drawing.Point(199, 44);
+            this.panelDesktopPane.Name = "panelDesktopPane";
+            this.panelDesktopPane.Size = new System.Drawing.Size(893, 535);
+            this.panelDesktopPane.TabIndex = 2;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(47, 40);
+            this.lblTitle.Text = "HOME";
             // 
             // Dashboard
             // 
@@ -344,6 +352,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(1093, 579);
+            this.Controls.Add(this.panelDesktopPane);
             this.Controls.Add(this.Navbar);
             this.Controls.Add(this.sidebar);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -381,7 +390,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolStripLabel IbITitle;
         private System.Windows.Forms.ToolStripButton FullScreen;
+        private System.Windows.Forms.Panel panelDesktopPane;
+        private System.Windows.Forms.ToolStripLabel lblTitle;
     }
 }
