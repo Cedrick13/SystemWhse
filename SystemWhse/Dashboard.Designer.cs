@@ -47,12 +47,12 @@
             this.transferToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.lblTitle = new System.Windows.Forms.ToolStripLabel();
             this.toolStripDropDownButton4 = new System.Windows.Forms.ToolStripDropDownButton();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FullScreen = new System.Windows.Forms.ToolStripButton();
             this.sidebarTransition = new System.Windows.Forms.Timer(this.components);
             this.panelDesktopPane = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.ToolStripLabel();
             this.sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Navbar.SuspendLayout();
@@ -267,14 +267,14 @@
             // 
             this.returnToolStripMenuItem.Image = global::SystemWhse.Properties.Resources.return_57;
             this.returnToolStripMenuItem.Name = "returnToolStripMenuItem";
-            this.returnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.returnToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.returnToolStripMenuItem.Text = "Return";
             // 
             // transferToolStripMenuItem
             // 
             this.transferToolStripMenuItem.Image = global::SystemWhse.Properties.Resources._876784;
             this.transferToolStripMenuItem.Name = "transferToolStripMenuItem";
-            this.transferToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.transferToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.transferToolStripMenuItem.Text = "Transfer";
             // 
             // toolStripDropDownButton2
@@ -296,6 +296,13 @@
             this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
             this.toolStripDropDownButton3.Size = new System.Drawing.Size(45, 40);
             this.toolStripDropDownButton3.Text = "Help";
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(58, 40);
+            this.lblTitle.Text = "HOME";
             // 
             // toolStripDropDownButton4
             // 
@@ -338,13 +345,6 @@
             this.panelDesktopPane.Name = "panelDesktopPane";
             this.panelDesktopPane.Size = new System.Drawing.Size(893, 535);
             this.panelDesktopPane.TabIndex = 2;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(47, 40);
-            this.lblTitle.Text = "HOME";
             // 
             // Dashboard
             // 
