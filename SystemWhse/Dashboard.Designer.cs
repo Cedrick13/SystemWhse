@@ -53,6 +53,7 @@
             this.FullScreen = new System.Windows.Forms.ToolStripButton();
             this.sidebarTransition = new System.Windows.Forms.Timer(this.components);
             this.panelDesktopPane = new System.Windows.Forms.Panel();
+            this.btnCloseChildForm = new System.Windows.Forms.Button();
             this.sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Navbar.SuspendLayout();
@@ -222,7 +223,7 @@
             this.Navbar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Navbar.AutoSize = false;
-            this.Navbar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Navbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(219)))), ((int)(((byte)(221)))));
             this.Navbar.Dock = System.Windows.Forms.DockStyle.None;
             this.Navbar.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.Navbar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -344,11 +345,25 @@
             this.panelDesktopPane.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelDesktopPane.BackColor = System.Drawing.Color.Transparent;
             this.panelDesktopPane.Location = new System.Drawing.Point(199, 43);
             this.panelDesktopPane.Name = "panelDesktopPane";
             this.panelDesktopPane.Size = new System.Drawing.Size(893, 536);
             this.panelDesktopPane.TabIndex = 2;
             this.panelDesktopPane.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktopPane_Paint);
+            // 
+            // btnCloseChildForm
+            // 
+            this.btnCloseChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(219)))), ((int)(((byte)(221)))));
+            this.btnCloseChildForm.FlatAppearance.BorderSize = 0;
+            this.btnCloseChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseChildForm.Image = ((System.Drawing.Image)(resources.GetObject("btnCloseChildForm.Image")));
+            this.btnCloseChildForm.Location = new System.Drawing.Point(296, 10);
+            this.btnCloseChildForm.Name = "btnCloseChildForm";
+            this.btnCloseChildForm.Size = new System.Drawing.Size(37, 23);
+            this.btnCloseChildForm.TabIndex = 3;
+            this.btnCloseChildForm.UseVisualStyleBackColor = false;
+            this.btnCloseChildForm.Click += new System.EventHandler(this.btnCloseChildForm_Click);
             // 
             // Dashboard
             // 
@@ -356,6 +371,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(1093, 579);
+            this.Controls.Add(this.btnCloseChildForm);
             this.Controls.Add(this.panelDesktopPane);
             this.Controls.Add(this.Navbar);
             this.Controls.Add(this.sidebar);
@@ -397,5 +413,6 @@
         private System.Windows.Forms.ToolStripButton FullScreen;
         private System.Windows.Forms.Panel panelDesktopPane;
         private System.Windows.Forms.ToolStripLabel lblTitle;
+        private System.Windows.Forms.Button btnCloseChildForm;
     }
 }

@@ -24,6 +24,7 @@ namespace SystemWhse
         {
             InitializeComponent();
             random = new Random();
+            btnCloseChildForm.Visible = false;
         }
 
         //Methods
@@ -50,6 +51,7 @@ namespace SystemWhse
                     currentButton.BackColor = color;
                     currentButton.ForeColor = Color.White;
                     currentButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    btnCloseChildForm.Visible = true;
 
                 }
             }
@@ -192,6 +194,21 @@ namespace SystemWhse
         private void panelDesktopPane_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnCloseChildForm_Click(object sender, EventArgs e)
+        {
+            if(activeForm != null)
+                activeForm.Close();
+            Reset();
+        }
+        private void Reset()
+        {
+            DisableButton();
+            lblTitle.Text = "HOME";
+            Navbar.BackColor = Color.FromArgb(218, 219, 221);
+            currentButton = null;
+            btnCloseChildForm.Visible = false;
         }
     }
 }
