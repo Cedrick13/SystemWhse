@@ -50,7 +50,7 @@
             this.toolStripDropDownButton4 = new System.Windows.Forms.ToolStripDropDownButton();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sidebarTransition = new System.Windows.Forms.Timer(this.components);
-            this.label2 = new System.Windows.Forms.Label();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Navbar.SuspendLayout();
@@ -74,6 +74,7 @@
             this.sidebar.Name = "sidebar";
             this.sidebar.Size = new System.Drawing.Size(199, 535);
             this.sidebar.TabIndex = 0;
+            this.sidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.sidebar_Paint);
             // 
             // label1
             // 
@@ -219,6 +220,7 @@
             this.Navbar.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.Navbar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
+            this.toolStripLabel1,
             this.toolStripDropDownButton1,
             this.toolStripDropDownButton2,
             this.toolStripDropDownButton3,
@@ -312,14 +314,12 @@
             this.sidebarTransition.Interval = 10;
             this.sidebarTransition.Tick += new System.EventHandler(this.sidebarTransition_Tick);
             // 
-            // label2
+            // toolStripLabel1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(652, 183);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "label2";
+            this.toolStripLabel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(45, 40);
+            this.toolStripLabel1.Text = "Home";
             // 
             // Dashboard
             // 
@@ -327,7 +327,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(1093, 579);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.Navbar);
             this.Controls.Add(this.sidebar);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -340,7 +339,6 @@
             this.Navbar.ResumeLayout(false);
             this.Navbar.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -366,6 +364,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
     }
 }

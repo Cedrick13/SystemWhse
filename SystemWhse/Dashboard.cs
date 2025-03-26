@@ -74,5 +74,10 @@ namespace SystemWhse
         {
 
         }
+
+        private void sidebar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
