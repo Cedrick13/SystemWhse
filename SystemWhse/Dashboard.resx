@@ -166,6 +166,19 @@
         TgDQASA1MVpwzwAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="FullScreen.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGjSURBVEhL7VTLbsJADMwFSMgDiRQQCInSz6jKpe2nlL64
+        Q/kAKJSeKh6/25nVJNpETRuhHjgwkpW11/Y49u46Z5we6vX62HXdN8gskUqlsm+321dycRqNxmW1Wt3T
+        D/5zfqHParXag1yKQWctDaCPgiB4lZoCthfuSTWAPtOyGHkCVLiN4ziUmqLZbEbY20s1OIqAiXzf/7BJ
+        aMMffPIrk0E+9kfQCXKD6r6SpCJZtVqtgDYk3yTJqcN3x5hSBBjWgf3tdDq+53krJur3+x4IFpBbyYI2
+        Ea9JDDxz8EpTDPu0sDok2IRhuOz1erHMTrfbvSAJJNM6O7Y0RHIvNQVtdvKjoTb8HwEu0VDL9LSwRWyL
+        zKZFtHHY7L/MmdhCJENmdUxgDXkJuZMsBoOByz0chHeS4PuE2J3SFMM6plsmoE1tMgPVTNbJHnUeacRc
+        Q6a0/Qo4z7U0YCK2ye63/XcyGYCg1E3OEKDag508gSrPPxWlbnKGAPoIJBOpKaIomuAv8o/d3wSo6pFP
+        L2SKAArX+ed6SBv3tD+l4Lkey+WMk4HjfANxq0mPqgY0XQAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="sidebarTransition.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>122, 17</value>
   </metadata>

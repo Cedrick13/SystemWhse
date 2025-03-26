@@ -41,7 +41,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.Navbar = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.Menu = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.returnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,6 +51,7 @@
             this.toolStripDropDownButton4 = new System.Windows.Forms.ToolStripDropDownButton();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sidebarTransition = new System.Windows.Forms.Timer(this.components);
+            this.FullScreen = new System.Windows.Forms.ToolStripButton();
             this.sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Navbar.SuspendLayout();
@@ -224,12 +225,13 @@
             this.Navbar.Dock = System.Windows.Forms.DockStyle.None;
             this.Navbar.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.Navbar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
+            this.Menu,
             this.toolStripLabel1,
             this.toolStripDropDownButton1,
             this.toolStripDropDownButton2,
             this.toolStripDropDownButton3,
-            this.toolStripDropDownButton4});
+            this.toolStripDropDownButton4,
+            this.FullScreen});
             this.Navbar.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.Navbar.Location = new System.Drawing.Point(0, 0);
             this.Navbar.Name = "Navbar";
@@ -238,14 +240,14 @@
             this.Navbar.TabIndex = 1;
             this.Navbar.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // Menu
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::SystemWhse.Properties.Resources.menu_icon_png_3_lines_11552739310fjzs2n2wxt1;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 40);
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.Menu.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.Menu.Image = global::SystemWhse.Properties.Resources.menu_icon_png_3_lines_11552739310fjzs2n2wxt1;
+            this.Menu.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Menu.Name = "Menu";
+            this.Menu.Size = new System.Drawing.Size(23, 40);
+            this.Menu.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripLabel1
             // 
@@ -317,7 +319,7 @@
             // 
             this.logoutToolStripMenuItem.Image = global::SystemWhse.Properties.Resources._141_1411375_logout_free_icon_3_switch_removebg_preview;
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
@@ -325,6 +327,16 @@
             // 
             this.sidebarTransition.Interval = 10;
             this.sidebarTransition.Tick += new System.EventHandler(this.sidebarTransition_Tick);
+            // 
+            // FullScreen
+            // 
+            this.FullScreen.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.FullScreen.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.FullScreen.Image = ((System.Drawing.Image)(resources.GetObject("FullScreen.Image")));
+            this.FullScreen.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.FullScreen.Name = "FullScreen";
+            this.FullScreen.Size = new System.Drawing.Size(23, 40);
+            this.FullScreen.Text = "toolStripButton2";
             // 
             // Dashboard
             // 
@@ -365,10 +377,11 @@
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ToolStrip Navbar;
         private System.Windows.Forms.Timer sidebarTransition;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton Menu;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripButton FullScreen;
     }
 }
