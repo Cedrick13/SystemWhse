@@ -56,7 +56,6 @@
             this.panelDesktopPane = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnCloseChildForm = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -378,7 +377,7 @@
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(263, 109);
+            this.pictureBox2.Location = new System.Drawing.Point(181, 109);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(542, 300);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -398,10 +397,6 @@
             this.btnCloseChildForm.TabIndex = 3;
             this.btnCloseChildForm.UseVisualStyleBackColor = false;
             this.btnCloseChildForm.Click += new System.EventHandler(this.btnCloseChildForm_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Dashboard
             // 
@@ -431,8 +426,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel sidebar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
@@ -458,6 +451,6 @@
         private System.Windows.Forms.Button btnCloseChildForm;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel sidebar;
     }
 }

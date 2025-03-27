@@ -16,5 +16,19 @@ namespace SystemWhse.Forms
         {
             InitializeComponent();
         }
+
+        private void FormHistory_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+            label1.Text = DateTime.Now.ToLongTimeString();
+
+            label2.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToLongTimeString();
+            timer1.Start();
+        }
     }
 }
