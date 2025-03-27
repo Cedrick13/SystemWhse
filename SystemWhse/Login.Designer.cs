@@ -189,6 +189,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(163, 18);
             this.txtPassword.TabIndex = 15;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // pictureBox2
             // 

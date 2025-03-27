@@ -114,7 +114,7 @@ namespace SystemWhse
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Application.Exit(); 
         }
 
         bool sidebarExpand = true;
