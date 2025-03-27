@@ -48,13 +48,13 @@
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
             this.lblTitle = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripDropDownButton4 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.Account = new System.Windows.Forms.ToolStripDropDownButton();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.FullScreen = new System.Windows.Forms.ToolStripButton();
+            this.btnMaximize = new System.Windows.Forms.ToolStripButton();
             this.sidebarTransition = new System.Windows.Forms.Timer(this.components);
             this.panelDesktopPane = new System.Windows.Forms.Panel();
-            this.btnCloseChildForm = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnCloseChildForm = new System.Windows.Forms.Button();
             this.sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Navbar.SuspendLayout();
@@ -76,9 +76,9 @@
             this.sidebar.Controls.Add(this.button3);
             this.sidebar.Controls.Add(this.button2);
             this.sidebar.Controls.Add(this.button1);
-            this.sidebar.Location = new System.Drawing.Point(0, 44);
+            this.sidebar.Location = new System.Drawing.Point(0, 43);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(199, 535);
+            this.sidebar.Size = new System.Drawing.Size(199, 536);
             this.sidebar.TabIndex = 0;
             this.sidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.sidebar_Paint);
             // 
@@ -235,8 +235,8 @@
             this.toolStripDropDownButton2,
             this.toolStripDropDownButton3,
             this.lblTitle,
-            this.toolStripDropDownButton4,
-            this.FullScreen});
+            this.Account,
+            this.btnMaximize});
             this.Navbar.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.Navbar.Location = new System.Drawing.Point(0, 0);
             this.Navbar.Name = "Navbar";
@@ -309,35 +309,36 @@
             this.lblTitle.Size = new System.Drawing.Size(58, 40);
             this.lblTitle.Text = "HOME";
             // 
-            // toolStripDropDownButton4
+            // Account
             // 
-            this.toolStripDropDownButton4.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripDropDownButton4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Account.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.Account.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.logoutToolStripMenuItem});
-            this.toolStripDropDownButton4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.toolStripDropDownButton4.Image = global::SystemWhse.Properties.Resources._1081856_200;
-            this.toolStripDropDownButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton4.Name = "toolStripDropDownButton4";
-            this.toolStripDropDownButton4.Size = new System.Drawing.Size(101, 40);
-            this.toolStripDropDownButton4.Text = "Ethan Carter";
+            this.Account.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Account.Image = global::SystemWhse.Properties.Resources._1081856_200;
+            this.Account.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Account.Name = "Account";
+            this.Account.Size = new System.Drawing.Size(101, 40);
+            this.Account.Text = "Ethan Carter";
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Image = global::SystemWhse.Properties.Resources._141_1411375_logout_free_icon_3_switch_removebg_preview;
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
-            // FullScreen
+            // btnMaximize
             // 
-            this.FullScreen.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.FullScreen.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.FullScreen.Image = ((System.Drawing.Image)(resources.GetObject("FullScreen.Image")));
-            this.FullScreen.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.FullScreen.Name = "FullScreen";
-            this.FullScreen.Size = new System.Drawing.Size(23, 40);
-            this.FullScreen.Text = "fullscreen";
+            this.btnMaximize.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnMaximize.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnMaximize.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximize.Image")));
+            this.btnMaximize.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnMaximize.Name = "btnMaximize";
+            this.btnMaximize.Size = new System.Drawing.Size(23, 40);
+            this.btnMaximize.Text = "Fullscreen";
+            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
             // 
             // sidebarTransition
             // 
@@ -357,6 +358,18 @@
             this.panelDesktopPane.TabIndex = 2;
             this.panelDesktopPane.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktopPane_Paint);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(196, 110);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(542, 300);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
+            // 
             // btnCloseChildForm
             // 
             this.btnCloseChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(219)))), ((int)(((byte)(221)))));
@@ -369,18 +382,6 @@
             this.btnCloseChildForm.TabIndex = 3;
             this.btnCloseChildForm.UseVisualStyleBackColor = false;
             this.btnCloseChildForm.Click += new System.EventHandler(this.btnCloseChildForm_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(196, 110);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(542, 300);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
             // 
             // Dashboard
             // 
@@ -396,6 +397,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Dashboard";
             this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             this.sidebar.ResumeLayout(false);
             this.sidebar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -421,7 +423,7 @@
         private System.Windows.Forms.ToolStripMenuItem transferToolStripMenuItem;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton3;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton4;
+        private System.Windows.Forms.ToolStripDropDownButton Account;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ToolStrip Navbar;
         private System.Windows.Forms.Timer sidebarTransition;
@@ -429,7 +431,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolStripButton FullScreen;
+        private System.Windows.Forms.ToolStripButton btnMaximize;
         private System.Windows.Forms.Panel panelDesktopPane;
         private System.Windows.Forms.ToolStripLabel lblTitle;
         private System.Windows.Forms.Button btnCloseChildForm;
