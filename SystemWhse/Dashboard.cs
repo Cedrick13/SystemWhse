@@ -243,5 +243,35 @@ namespace SystemWhse
             else
                 this.WindowState = FormWindowState.Normal;
         }
+
+        private void returnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void transferToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
     }
 }
