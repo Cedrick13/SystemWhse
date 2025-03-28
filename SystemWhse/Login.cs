@@ -109,6 +109,10 @@ namespace SystemWhse
                         this.Hide();
                         dashboard.Show();
                     }
+                    else
+                    {
+                        MessageBox.Show("Invalid Username or Password", "Error");
+                    }
                 }
            }
         }
