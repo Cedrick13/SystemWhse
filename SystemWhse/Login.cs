@@ -30,7 +30,7 @@ namespace SystemWhse
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-
+          
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -45,7 +45,11 @@ namespace SystemWhse
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            if (Properties.Settings.Default.Username != string.Empty)
+            {
+                txtUsername.Text = Properties.Settings.Default.Username;
+                txtPassword.Text = Properties.Settings.Default.Password;
+            }
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -113,6 +117,20 @@ namespace SystemWhse
                     {
                         MessageBox.Show("Invalid Username or Password", "Error");
                     }
+
+                    if (checkBox1.Checked == true) 
+                    {
+                        Properties.Settings.Default.Username = txtUsername.Text.Trim();
+                        Properties.Settings.Default.Password = txtPassword.Text.Trim();
+                        Properties.Settings.Default.Save();
+                    }
+                    else
+                    {
+                        Properties.Settings.Default.Username = "";
+                        Properties.Settings.Default.Password = "";
+                        Properties.Settings.Default.Save();
+                    }
+
                 }
            }
         }
