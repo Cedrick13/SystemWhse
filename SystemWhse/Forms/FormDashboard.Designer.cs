@@ -36,9 +36,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -127,15 +127,14 @@
             this.panel1.Size = new System.Drawing.Size(225, 53);
             this.panel1.TabIndex = 8;
             // 
-            // pictureBox1
+            // label4
             // 
-            this.pictureBox1.Image = global::SystemWhse.Properties.Resources._50177567_warehouse_with_open_door_isometric_3d_icon_on_a_white_background;
-            this.pictureBox1.Location = new System.Drawing.Point(1, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(46, 47);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(50, 35);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(19, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "90";
             // 
             // label3
             // 
@@ -146,17 +145,19 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "Opening";
             // 
-            // label4
+            // pictureBox1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(50, 35);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(19, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "90";
+            this.pictureBox1.Image = global::SystemWhse.Properties.Resources._50177567_warehouse_with_open_door_isometric_3d_icon_on_a_white_background;
+            this.pictureBox1.Location = new System.Drawing.Point(1, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(230)))), ((int)(((byte)(232)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label5);
@@ -197,7 +198,7 @@
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(230)))), ((int)(((byte)(232)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label7);

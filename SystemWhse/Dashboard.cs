@@ -137,7 +137,7 @@ namespace SystemWhse
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            sidebarTransition.Start();
+            //sidebarTransition.Start();
         }
 
         private void button1_Click(object sender, EventArgs e)
