@@ -16,5 +16,10 @@ namespace SystemWhse.Forms
         {
             InitializeComponent();
         }
+
+        private void FormInventory_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

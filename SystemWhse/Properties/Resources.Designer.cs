@@ -83,6 +83,16 @@ namespace SystemWhse.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _50177567_warehouse_with_open_door_isometric_3d_icon_on_a_white_background {
+            get {
+                object obj = ResourceManager.GetObject("50177567-warehouse-with-open-door-isometric-3d-icon-on-a-white-background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _876784 {
             get {
                 object obj = ResourceManager.GetObject("876784", resourceCulture);

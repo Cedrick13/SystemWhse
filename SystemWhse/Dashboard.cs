@@ -162,7 +162,8 @@ namespace SystemWhse
 
         private void button2_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormInventory(), sender);
+            //OpenChildForm(new Forms.FormInventory(), sender);
+            contextMenuStrip1.Show(button2,button2.Width,1);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -270,6 +271,11 @@ namespace SystemWhse
         }
 
         private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void warehouseToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
