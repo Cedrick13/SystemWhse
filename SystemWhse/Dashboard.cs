@@ -9,6 +9,7 @@ using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SystemWhse.Forms;
 
 namespace SystemWhse
 {
@@ -247,12 +248,18 @@ namespace SystemWhse
 
         private void returnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FormReturn newForm = new FormReturn(); // Create new form
+            this.Hide(); // Hide the current form
+            newForm.ShowDialog(); // Show new form as a dialog
+            this.Show(); // Show the original form again after closing Form2
         }
 
         private void transferToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FormTransfer newForm = new FormTransfer(); // Create new form
+            this.Hide(); // Hide the current form
+            newForm.ShowDialog(); // Show new form as a dialog
+            this.Show(); // Show the original form again after closing Form2
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
