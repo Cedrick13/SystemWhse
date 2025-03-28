@@ -353,6 +353,36 @@ namespace SystemWhse.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap right_arrow_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("right-arrow-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap right_arrow_removebg_preview111111111111 {
+            get {
+                object obj = ResourceManager.GetObject("right-arrow-removebg-preview111111111111", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap right_arrow_removebg_preview1111111111112 {
+            get {
+                object obj = ResourceManager.GetObject("right-arrow-removebg-preview1111111111112", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Timecargo_Logo {
             get {
                 object obj = ResourceManager.GetObject("Timecargo Logo", resourceCulture);

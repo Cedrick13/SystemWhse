@@ -276,6 +276,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\right-arrow-removebg-preview1111111111112.png" />
+    <None Include="Resources\right-arrow-removebg-preview111111111111.png" />
+    <None Include="Resources\right-arrow-removebg-preview.png" />
     <None Include="Resources\50177567-warehouse-with-open-door-isometric-3d-icon-on-a-white-background.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
