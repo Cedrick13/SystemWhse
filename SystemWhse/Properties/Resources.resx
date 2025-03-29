@@ -130,9 +130,6 @@
   <data name="Password-shopping1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Password-shopping.ico1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="apps" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\apps.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="1081856-200" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1081856-200.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -154,6 +151,9 @@
   <data name="Logo no bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo no bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="load_8552189" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\load_8552189.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="apps-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\apps-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -166,17 +166,14 @@
   <data name="Password-shopping.ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Password-shopping.ico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Timecargo Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Timecargo Logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="7843763" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\7843763.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="50177567-warehouse-with-open-door-isometric-3d-icon-on-a-white-background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\50177567-warehouse-with-open-door-isometric-3d-icon-on-a-white-background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="images2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="3774895" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3774895.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="image 9" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image 9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,8 +193,11 @@
   <data name="list-solid (1) 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\list-solid (1) 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="istockphoto-1495792088-612x612" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\istockphoto-1495792088-612x612.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="3774895" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3774895.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Timecargo Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Timecargo Logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="menu-icon-png-3-lines-11552739310fjzs2n2wxt-removebg-preview1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menu-icon-png-3-lines-11552739310fjzs2n2wxt-removebg-preview1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,11 +211,17 @@
   <data name="images1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="istockphoto-1495792088-612x612" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\istockphoto-1495792088-612x612.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Timecargo logo blur" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Timecargo logo blur.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="right-arrow-removebg-preview1111111111112" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\right-arrow-removebg-preview1111111111112.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4537278" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4537278.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="image 7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image 7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,8 +232,8 @@
   <data name="menu-icon-png-3-lines-11552739310fjzs2n2wxt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menu-icon-png-3-lines-11552739310fjzs2n2wxt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="4537278" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4537278.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="apps" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\apps.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="right-arrow-removebg-preview111111111111" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\right-arrow-removebg-preview111111111111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,7 +244,7 @@
   <data name="down-arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\down-arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="7843763" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\7843763.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="trolley_3361527" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trolley_3361527.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -303,6 +303,16 @@ namespace SystemWhse.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap load_8552189 {
+            get {
+                object obj = ResourceManager.GetObject("load_8552189", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo_no_bg {
             get {
                 object obj = ResourceManager.GetObject("Logo no bg", resourceCulture);
@@ -456,6 +466,16 @@ namespace SystemWhse.Properties {
         internal static System.Drawing.Bitmap Timecargo_logo_blur {
             get {
                 object obj = ResourceManager.GetObject("Timecargo logo blur", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap trolley_3361527 {
+            get {
+                object obj = ResourceManager.GetObject("trolley_3361527", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
