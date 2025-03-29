@@ -276,6 +276,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\7843763.png" />
+    <None Include="Resources\3774895.png" />
+    <None Include="Resources\4537278.png" />
+    <None Include="Resources\list-solid %281%29 1.png" />
+    <None Include="Resources\pull_out_package_box-512 1.png" />
+    <None Include="Resources\istockphoto-1495792088-612x612.jpg" />
     <None Include="Resources\right-arrow-removebg-preview1111111111112.png" />
     <None Include="Resources\right-arrow-removebg-preview111111111111.png" />
     <None Include="Resources\right-arrow-removebg-preview.png" />

@@ -83,9 +83,39 @@ namespace SystemWhse.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3774895 {
+            get {
+                object obj = ResourceManager.GetObject("3774895", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4537278 {
+            get {
+                object obj = ResourceManager.GetObject("4537278", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _50177567_warehouse_with_open_door_isometric_3d_icon_on_a_white_background {
             get {
                 object obj = ResourceManager.GetObject("50177567-warehouse-with-open-door-isometric-3d-icon-on-a-white-background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _7843763 {
+            get {
+                object obj = ResourceManager.GetObject("7843763", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,6 +283,26 @@ namespace SystemWhse.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_1495792088_612x612 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-1495792088-612x612", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap list_solid__1__1 {
+            get {
+                object obj = ResourceManager.GetObject("list-solid (1) 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo_no_bg {
             get {
                 object obj = ResourceManager.GetObject("Logo no bg", resourceCulture);
@@ -336,6 +386,16 @@ namespace SystemWhse.Properties {
         internal static System.Drawing.Bitmap Password_shopping1 {
             get {
                 object obj = ResourceManager.GetObject("Password-shopping1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pull_out_package_box_512_1 {
+            get {
+                object obj = ResourceManager.GetObject("pull_out_package_box-512 1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
