@@ -252,13 +252,35 @@ namespace SystemWhse
         private void returnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormReturn form2 = new FormReturn();
-            form2.ShowDialog(this); // Form1 remains accessible but can't be clicked
+
+            // Disable Form1 while Form2 is open
+            this.Enabled = false;
+
+            // Show Form2 as modal
+            form2.ShowDialog();
+
+            // Re-enable Form1 after Form2 closes
+            this.Enabled = true;
+
+            // Bring Form1 back to front
+            this.BringToFront();
         }
 
         private void transferToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormTransfer form2 = new FormTransfer();
-            form2.ShowDialog(this); // Form1 remains accessible but can't be clicked
+
+            // Disable Form1 while Form2 is open
+            this.Enabled = false;
+
+            // Show Form2 as modal
+            form2.ShowDialog();
+
+            // Re-enable Form1 after Form2 closes
+            this.Enabled = true;
+
+            // Bring Form1 back to front
+            this.BringToFront();
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -294,13 +316,35 @@ namespace SystemWhse
         private void transferOfStocksToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormTransferStock form2 = new FormTransferStock();
-            form2.ShowDialog(this); // Form1 remains accessible but can't be clicked
+
+            // Disable Form1 while Form2 is open
+            this.Enabled = false;
+
+            // Show Form2 as modal
+            form2.ShowDialog();
+
+            // Re-enable Form1 after Form2 closes
+            this.Enabled = true;
+
+            // Bring Form1 back to front
+            this.BringToFront();
         }
 
         private void wToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormWarehouse form2 = new FormWarehouse();
-            form2.ShowDialog(this); // Form1 remains accessible but can't be clicked
+
+            // Disable Form1 while Form2 is open
+            this.Enabled = false;
+
+            // Show Form2 as modal
+            form2.ShowDialog();
+
+            // Re-enable Form1 after Form2 closes
+            this.Enabled = true;
+
+            // Bring Form1 back to front
+            this.BringToFront();
         }
     }
 }
