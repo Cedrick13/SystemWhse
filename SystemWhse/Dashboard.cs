@@ -115,7 +115,10 @@ namespace SystemWhse
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit(); 
+            this.Hide(); // Hide the current form
+            Login login = new Login();
+            login.ShowDialog(); // Show the login form
+            this.Close(); // Close the current form after login form closes 
         }
 
         bool sidebarExpand = true;
@@ -285,6 +288,27 @@ namespace SystemWhse
         private void warehouseToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+        private void Dashboard_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void transferOfStocksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTransferStock newForm = new FormTransferStock(); // Create new form
+            this.Hide(); // Hide the current form
+            newForm.ShowDialog(); // Show new form as a dialog
+            this.Show(); // Show the original form again after closing Form2
+        }
+
+        private void wToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTransferStock newForm = new FormTransferStock(); // Create new form
+            this.Hide(); // Hide the current form
+            newForm.ShowDialog(); // Show new form as a dialog
+            this.Show(); // Show the original form again after closing Form2
         }
     }
 }

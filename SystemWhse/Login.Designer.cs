@@ -238,6 +238,7 @@
             this.Name = "Login";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

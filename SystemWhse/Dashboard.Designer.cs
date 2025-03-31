@@ -83,7 +83,7 @@
             this.sidebar.Controls.Add(this.button1);
             this.sidebar.Location = new System.Drawing.Point(0, 43);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(199, 536);
+            this.sidebar.Size = new System.Drawing.Size(230, 536);
             this.sidebar.TabIndex = 0;
             this.sidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.sidebar_Paint);
             // 
@@ -169,7 +169,7 @@
             this.transferOfStocksToolStripMenuItem,
             this.wToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(172, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
             // 
             // btnCloseChildForm
             // 
@@ -417,15 +417,17 @@
             // 
             this.transferOfStocksToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("transferOfStocksToolStripMenuItem.Image")));
             this.transferOfStocksToolStripMenuItem.Name = "transferOfStocksToolStripMenuItem";
-            this.transferOfStocksToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.transferOfStocksToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.transferOfStocksToolStripMenuItem.Text = "Transfer Of Stocks ";
+            this.transferOfStocksToolStripMenuItem.Click += new System.EventHandler(this.transferOfStocksToolStripMenuItem_Click);
             // 
             // wToolStripMenuItem
             // 
             this.wToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("wToolStripMenuItem.Image")));
             this.wToolStripMenuItem.Name = "wToolStripMenuItem";
-            this.wToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.wToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.wToolStripMenuItem.Text = "Warehouse";
+            this.wToolStripMenuItem.Click += new System.EventHandler(this.wToolStripMenuItem_Click);
             // 
             // Dashboard
             // 
@@ -443,6 +445,7 @@
             this.Name = "Dashboard";
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Dashboard_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Dashboard_MouseDown);
             this.sidebar.ResumeLayout(false);
             this.sidebar.PerformLayout();
             this.panelDesktopPane.ResumeLayout(false);

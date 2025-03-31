@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,7 +17,14 @@ namespace SystemWhse
         public Login()
         {
             InitializeComponent();
+            this.Text = string.Empty;
+            this.ControlBox = false;
         }
+        [DllImport("user32.Dll", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.Dll", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int IParam);
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -143,6 +151,12 @@ namespace SystemWhse
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Login_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

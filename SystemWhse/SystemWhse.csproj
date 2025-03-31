@@ -145,6 +145,18 @@
     <Compile Include="Forms\FormTransfer.Designer.cs">
       <DependentUpon>FormTransfer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormTransferStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormTransferStock.Designer.cs">
+      <DependentUpon>FormTransferStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormWarehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormWarehouse.Designer.cs">
+      <DependentUpon>FormWarehouse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +195,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormTransfer.resx">
       <DependentUpon>FormTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormTransferStock.resx">
+      <DependentUpon>FormTransferStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormWarehouse.resx">
+      <DependentUpon>FormWarehouse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
