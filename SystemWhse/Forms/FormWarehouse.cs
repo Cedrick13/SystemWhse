@@ -20,16 +20,16 @@ namespace SystemWhse.Forms
 
         private void FormWarehouse_Load(object sender, EventArgs e)
         {
-            timer1.Start();
-            label1.Text = DateTime.Now.ToLongTimeString();
+            //timer1.Start();
+            //label1.Text = DateTime.Now.ToLongTimeString();
 
-            label2.Text = DateTime.Now.ToLongDateString();
+            //label2.Text = DateTime.Now.ToLongDateString();
         }
 
         private void timer1_Tick_1(object sender, EventArgs e)
         {
-            label1.Text = DateTime.Now.ToLongTimeString();
-            timer1.Start();
+            //label1.Text = DateTime.Now.ToLongTimeString();
+            //timer1.Start();
         }
     }
 }
