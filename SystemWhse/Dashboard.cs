@@ -27,8 +27,8 @@ namespace SystemWhse
             InitializeComponent();
             random = new Random();
             btnCloseChildForm.Visible = false;
-            this.Text = string.Empty;
-            this.ControlBox = false;
+          //this.Text = string.Empty;
+          //this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
         [DllImport("user32.Dll", EntryPoint = "ReleaseCapture")]
@@ -238,7 +238,10 @@ namespace SystemWhse
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-
+            int w = Screen.PrimaryScreen.Bounds.Width;
+            int h = Screen.PrimaryScreen.Bounds.Height;
+            this.Location = new Point(0, 0);
+            this.Size = new Size(w, h);
         }
 
         private void btnMaximize_Click(object sender, EventArgs e)

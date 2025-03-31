@@ -17,8 +17,8 @@ namespace SystemWhse
         public Login()
         {
             InitializeComponent();
-            this.Text = string.Empty;
-            this.ControlBox = false;
+            //this.Text = string.Empty;
+            //this.ControlBox = false;
         }
         [DllImport("user32.Dll", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
