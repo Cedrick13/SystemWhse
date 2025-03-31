@@ -101,6 +101,7 @@ namespace SystemWhse.Forms
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormWarehouse";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormWarehouse";
             this.Load += new System.EventHandler(this.FormWarehouse_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
