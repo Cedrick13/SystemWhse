@@ -251,18 +251,14 @@ namespace SystemWhse
 
         private void returnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormReturn newForm = new FormReturn(); // Create new form
-            this.Hide(); // Hide the current form
-            newForm.ShowDialog(); // Show new form as a dialog
-            this.Show(); // Show the original form again after closing Form2
+            FormReturn form2 = new FormReturn();
+            form2.ShowDialog(this); // Form1 remains accessible but can't be clicked
         }
 
         private void transferToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormTransfer newForm = new FormTransfer(); // Create new form
-            this.Hide(); // Hide the current form
-            newForm.ShowDialog(); // Show new form as a dialog
-            this.Show(); // Show the original form again after closing Form2
+            FormTransfer form2 = new FormTransfer();
+            form2.ShowDialog(this); // Form1 remains accessible but can't be clicked
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -297,18 +293,14 @@ namespace SystemWhse
 
         private void transferOfStocksToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormTransferStock newForm = new FormTransferStock(); // Create new form
-            this.Hide(); // Hide the current form
-            newForm.ShowDialog(); // Show new form as a dialog
-            this.Show(); // Show the original form again after closing Form2
+            FormTransferStock form2 = new FormTransferStock();
+            form2.ShowDialog(this); // Form1 remains accessible but can't be clicked
         }
 
         private void wToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormTransferStock newForm = new FormTransferStock(); // Create new form
-            this.Hide(); // Hide the current form
-            newForm.ShowDialog(); // Show new form as a dialog
-            this.Show(); // Show the original form again after closing Form2
+            FormWarehouse form2 = new FormWarehouse();
+            form2.ShowDialog(this); // Form1 remains accessible but can't be clicked
         }
     }
 }
