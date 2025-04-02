@@ -127,7 +127,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(32, 23);
             this.label9.TabIndex = 11;
-            this.label9.Text = "90";
+            this.label9.Text = "1";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label10
@@ -171,7 +171,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(32, 23);
             this.label7.TabIndex = 11;
-            this.label7.Text = "90";
+            this.label7.Text = "1";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label8
@@ -215,7 +215,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 23);
             this.label5.TabIndex = 11;
-            this.label5.Text = "90";
+            this.label5.Text = "1";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label6
@@ -260,7 +260,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(32, 23);
             this.label4.TabIndex = 11;
-            this.label4.Text = "90";
+            this.label4.Text = "1";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3
