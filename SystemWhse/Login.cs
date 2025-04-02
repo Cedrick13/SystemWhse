@@ -94,12 +94,12 @@ namespace SystemWhse
         {
            if (txtUsername.Text.TrimStart() == string.Empty)
             {
-                MessageBox.Show("Enter Valid Username", "error");
+                MessageBox.Show("Please fill out this field", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return false;
 
             } else if (txtPassword.Text.TrimStart() == string.Empty)
             {
-                MessageBox.Show("Enter Valid Password", "error");
+                MessageBox.Show("Please fill out this field", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return false;
             }
             return true;
@@ -123,7 +123,7 @@ namespace SystemWhse
                     }
                     else
                     {
-                        MessageBox.Show("Invalid Username or Password", "Error");
+                        MessageBox.Show("Invalid Username or Password", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
                     if (checkBox1.Checked == true) 
