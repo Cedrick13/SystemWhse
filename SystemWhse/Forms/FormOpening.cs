@@ -35,5 +35,20 @@ namespace SystemWhse.Forms
             label1.Text = DateTime.Now.ToLongTimeString();
             timer1.Start();
         }
+
+        private void btnprev_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
