@@ -247,6 +247,7 @@
             // 
             // checkBox2
             // 
+            this.checkBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox2.AutoSize = true;
             this.checkBox2.Location = new System.Drawing.Point(590, 450);
             this.checkBox2.Name = "checkBox2";
