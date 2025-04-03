@@ -49,6 +49,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -65,7 +67,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(810, 21);
+            this.label1.Location = new System.Drawing.Point(614, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 17);
             this.label1.TabIndex = 6;
@@ -76,7 +78,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(812, 3);
+            this.label2.Location = new System.Drawing.Point(616, 3);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 17);
             this.label2.TabIndex = 7;
@@ -104,7 +106,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(974, 100);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(778, 100);
             this.tableLayoutPanel1.TabIndex = 8;
             // 
             // panel4
@@ -115,9 +117,9 @@
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.pictureBox4);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(732, 3);
+            this.panel4.Location = new System.Drawing.Point(585, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(239, 94);
+            this.panel4.Size = new System.Drawing.Size(190, 94);
             this.panel4.TabIndex = 15;
             // 
             // label9
@@ -159,9 +161,9 @@
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(489, 3);
+            this.panel3.Location = new System.Drawing.Point(391, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(237, 94);
+            this.panel3.Size = new System.Drawing.Size(188, 94);
             this.panel3.TabIndex = 14;
             // 
             // label7
@@ -203,9 +205,9 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(246, 3);
+            this.panel1.Location = new System.Drawing.Point(197, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(237, 94);
+            this.panel1.Size = new System.Drawing.Size(188, 94);
             this.panel1.TabIndex = 13;
             // 
             // label5
@@ -250,7 +252,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(237, 94);
+            this.panel2.Size = new System.Drawing.Size(188, 94);
             this.panel2.TabIndex = 9;
             // 
             // label4
@@ -284,12 +286,35 @@
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(219)))), ((int)(((byte)(221)))));
+            this.label11.Location = new System.Drawing.Point(300, 539);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(196, 13);
+            this.label11.TabIndex = 81;
+            this.label11.Text = "© 2025 timecargo.ph All rights reserved.";
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(219)))), ((int)(((byte)(221)))));
+            this.panel5.Location = new System.Drawing.Point(0, 534);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(799, 24);
+            this.panel5.TabIndex = 82;
+            // 
             // FormDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.ClientSize = new System.Drawing.Size(996, 518);
+            this.ClientSize = new System.Drawing.Size(800, 558);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -335,5 +360,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel5;
     }
 }
