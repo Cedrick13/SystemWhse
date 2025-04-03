@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace SystemWhse
 {
-    public partial class Login: Form
+    public partial class Login : Form
     {
         public Login()
         {
@@ -38,7 +38,7 @@ namespace SystemWhse
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-          
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -92,12 +92,13 @@ namespace SystemWhse
 
         private bool isValid()
         {
-           if (txtUsername.Text.TrimStart() == string.Empty)
+            if (txtUsername.Text.TrimStart() == string.Empty)
             {
                 MessageBox.Show("Please fill out this field", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return false;
 
-            } else if (txtPassword.Text.TrimStart() == string.Empty)
+            }
+            else if (txtPassword.Text.TrimStart() == string.Empty)
             {
                 MessageBox.Show("Please fill out this field", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return false;
@@ -107,8 +108,8 @@ namespace SystemWhse
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-           if (isValid())
-           {
+            if (isValid())
+            {
                 using (SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Cedrick\source\repos\SystemWhse\SystemWhse\Database1.mdf;Integrated Security=True"))
                 {
                     string query = "SELECT * FROM LOGIN WHERE username = '" + txtUsername.Text.Trim() + "'AND password = '" + txtPassword.Text.Trim() + "'";
@@ -126,7 +127,7 @@ namespace SystemWhse
                         MessageBox.Show("Invalid Username or Password", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
-                    if (checkBox1.Checked == true) 
+                    if (checkBox1.Checked == true)
                     {
                         Properties.Settings.Default.Username = txtUsername.Text.Trim();
                         Properties.Settings.Default.Password = txtPassword.Text.Trim();
@@ -140,12 +141,12 @@ namespace SystemWhse
                     }
 
                 }
-           }
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-                
+
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -157,6 +158,18 @@ namespace SystemWhse
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked == true)
+            {
+                txtPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtPassword.UseSystemPasswordChar = true;
+            }
         }
     }
 }
