@@ -93,7 +93,7 @@
             "20",
             "50",
             "100"});
-            this.comboBox1.Location = new System.Drawing.Point(65, 494);
+            this.comboBox1.Location = new System.Drawing.Point(65, 495);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(45, 21);
             this.comboBox1.TabIndex = 77;
@@ -104,7 +104,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(9, 495);
+            this.label3.Location = new System.Drawing.Point(9, 496);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 16);
             this.label3.TabIndex = 76;
@@ -137,7 +137,7 @@
             this.Label9.AutoSize = true;
             this.Label9.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label9.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Label9.Location = new System.Drawing.Point(314, 495);
+            this.Label9.Location = new System.Drawing.Point(314, 496);
             this.Label9.Name = "Label9";
             this.Label9.Size = new System.Drawing.Size(173, 16);
             this.Label9.TabIndex = 69;
@@ -148,7 +148,7 @@
             this.btnlast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnlast.BackColor = System.Drawing.Color.Transparent;
             this.btnlast.ForeColor = System.Drawing.Color.Black;
-            this.btnlast.Location = new System.Drawing.Point(758, 488);
+            this.btnlast.Location = new System.Drawing.Point(758, 490);
             this.btnlast.Name = "btnlast";
             this.btnlast.Size = new System.Drawing.Size(31, 29);
             this.btnlast.TabIndex = 70;
@@ -160,7 +160,7 @@
             this.btnnext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnnext.BackColor = System.Drawing.Color.Transparent;
             this.btnnext.ForeColor = System.Drawing.Color.Black;
-            this.btnnext.Location = new System.Drawing.Point(723, 488);
+            this.btnnext.Location = new System.Drawing.Point(723, 490);
             this.btnnext.Name = "btnnext";
             this.btnnext.Size = new System.Drawing.Size(31, 29);
             this.btnnext.TabIndex = 71;
@@ -172,7 +172,7 @@
             this.btnprev.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnprev.BackColor = System.Drawing.Color.Transparent;
             this.btnprev.ForeColor = System.Drawing.Color.Black;
-            this.btnprev.Location = new System.Drawing.Point(688, 488);
+            this.btnprev.Location = new System.Drawing.Point(688, 490);
             this.btnprev.Name = "btnprev";
             this.btnprev.Size = new System.Drawing.Size(31, 29);
             this.btnprev.TabIndex = 72;
@@ -184,7 +184,7 @@
             this.btnfirst.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnfirst.BackColor = System.Drawing.Color.Transparent;
             this.btnfirst.ForeColor = System.Drawing.Color.Black;
-            this.btnfirst.Location = new System.Drawing.Point(653, 488);
+            this.btnfirst.Location = new System.Drawing.Point(653, 490);
             this.btnfirst.Name = "btnfirst";
             this.btnfirst.Size = new System.Drawing.Size(31, 29);
             this.btnfirst.TabIndex = 73;
