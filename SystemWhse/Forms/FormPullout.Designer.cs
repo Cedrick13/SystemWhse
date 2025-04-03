@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPullout));
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -44,6 +45,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -214,12 +216,29 @@
             this.panel5.Size = new System.Drawing.Size(799, 24);
             this.panel5.TabIndex = 84;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(192)))), ((int)(((byte)(197)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(11, 43);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(177, 31);
+            this.button1.TabIndex = 85;
+            this.button1.Text = "       Create a new PullOut";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // FormPullout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(800, 558);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.comboBox1);
@@ -259,5 +278,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button button1;
     }
 }
