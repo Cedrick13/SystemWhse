@@ -15,9 +15,16 @@ namespace SystemWhse.Forms
         public FormReturn()
         {
             InitializeComponent();
+            this.Text = string.Empty;
+            this.ControlBox = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormReturn_Load(object sender, EventArgs e)
         {
 
         }
