@@ -143,10 +143,11 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel1.Controls.Add(this.txtUsername);
             this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel1.Location = new System.Drawing.Point(590, 273);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(221, 44);
@@ -166,9 +167,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SystemWhse.Properties.Resources._1081856_200;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(6, 7);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(46, 43);
+            this.pictureBox1.Size = new System.Drawing.Size(44, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
@@ -198,9 +199,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::SystemWhse.Properties.Resources.images_removebg_preview;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 1);
+            this.pictureBox2.Location = new System.Drawing.Point(6, 6);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(46, 43);
+            this.pictureBox2.Size = new System.Drawing.Size(44, 31);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
