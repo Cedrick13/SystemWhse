@@ -310,6 +310,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\asterisk-371.png" />
+    <None Include="Resources\asterisk-37.png" />
     <None Include="Resources\trolley_3361527.png" />
     <None Include="Resources\load_8552189.png" />
     <None Include="Resources\7843763.png" />

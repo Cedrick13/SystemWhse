@@ -153,6 +153,26 @@ namespace SystemWhse.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap asterisk_37 {
+            get {
+                object obj = ResourceManager.GetObject("asterisk-37", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap asterisk_371 {
+            get {
+                object obj = ResourceManager.GetObject("asterisk-371", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Blur_wrhs {
             get {
                 object obj = ResourceManager.GetObject("Blur wrhs", resourceCulture);
