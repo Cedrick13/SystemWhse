@@ -115,10 +115,17 @@ namespace SystemWhse
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide(); // Hide the current form
-            Login login = new Login();
-            login.ShowDialog(); // Show the login form
-            this.Close(); // Close the current form after login form closes 
+            DialogResult result = MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                // Open Login Form
+                Login login = new Login();
+                login.Show();
+
+                // Close the current form
+                this.Close();
+            }
         }
 
         bool sidebarExpand = true;
