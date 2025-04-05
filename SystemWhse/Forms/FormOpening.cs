@@ -47,30 +47,30 @@ namespace SystemWhse.Forms
                 try
                 {
                     conn.Open();
-                    string query = "SELECT custcode,itemcode,uom,itemdesc,qty_item FROM Items";
+                    string query = "SELECT itemcode,uom,custcode,itemdesc,qty_item FROM Items";
 
                     MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
 
                     // Add a new column for the counter
-                    dt.Columns.Add("RecNo", typeof(int));
+                    dt.Columns.Add("No", typeof(int));
 
                     // Loop through the rows and set the counter value
                     int counter = 1;
                     foreach (DataRow row in dt.Rows)
                     {
-                        row["RecNo"] = counter++;
+                        row["No"] = counter++;
                     }
                     
-                    dt.Columns["RecNo"].SetOrdinal(0);
+                    dt.Columns["No"].SetOrdinal(0);
 
                     dataGridView1.DataSource = dt;
 
                     dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
                     // Optionally, set specific column widths (if needed)
-                    dataGridView1.Columns["RecNo"].Width = 80;
+                    dataGridView1.Columns["No"].Width = 80;
                 }
                 catch (Exception ex)
                 {
