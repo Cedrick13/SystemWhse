@@ -127,7 +127,7 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(48, 66);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(32, 23);
+            this.label9.Size = new System.Drawing.Size(73, 23);
             this.label9.TabIndex = 11;
             this.label9.Text = "1";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

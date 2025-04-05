@@ -9,11 +9,13 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace SystemWhse
 {
     public partial class Login : Form
     {
+        private string connectionString = "server=192.168.1.230;user=Server;password=12345;database=tlcwms;";
         public Login()
         {
             InitializeComponent();
@@ -108,7 +110,45 @@ namespace SystemWhse
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if (isValid())
+            string username = txtUsername.Text.Trim();
+            string password = txtPassword.Text.Trim();
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT * FROM users WHERE username=@username AND password=SHA2(@password, 256)";
+
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@username", username);
+                    cmd.Parameters.AddWithValue("@password", password);
+
+                    MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    if (dt.Rows.Count > 0)
+                    {
+                        MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        // You can open another form here
+                        Dashboard dashboard = new Dashboard();
+                        this.Hide();
+                        dashboard.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+
+            /*if (isValid())
             {
                 using (SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Cedrick\source\repos\SystemWhse\SystemWhse\Database1.mdf;Integrated Security=True"))
                 {
@@ -141,7 +181,7 @@ namespace SystemWhse
                     }
 
                 }
-            }
+            }*/
         }
 
         private void button2_Click(object sender, EventArgs e)
