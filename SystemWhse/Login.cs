@@ -145,6 +145,18 @@ namespace SystemWhse
                 {
                     MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                if (checkBox1.Checked == true)
+                {
+                    Properties.Settings.Default.Username = txtUsername.Text.Trim();
+                    Properties.Settings.Default.Password = txtPassword.Text.Trim();
+                    Properties.Settings.Default.Save();
+                }
+                else
+                {
+                    Properties.Settings.Default.Username = "";
+                    Properties.Settings.Default.Password = "";
+                    Properties.Settings.Default.Save();
+                }
             }
 
 
@@ -166,20 +178,6 @@ namespace SystemWhse
                     {
                         MessageBox.Show("Invalid Username or Password", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-
-                    if (checkBox1.Checked == true)
-                    {
-                        Properties.Settings.Default.Username = txtUsername.Text.Trim();
-                        Properties.Settings.Default.Password = txtPassword.Text.Trim();
-                        Properties.Settings.Default.Save();
-                    }
-                    else
-                    {
-                        Properties.Settings.Default.Username = "";
-                        Properties.Settings.Default.Password = "";
-                        Properties.Settings.Default.Save();
-                    }
-
                 }
             }*/
         }
