@@ -37,7 +37,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Label6 = new System.Windows.Forms.Label();
             this.txtsearch = new System.Windows.Forms.TextBox();
-            this.Label9 = new System.Windows.Forms.Label();
             this.btnlast = new System.Windows.Forms.Button();
             this.btnnext = new System.Windows.Forms.Button();
             this.btnprev = new System.Windows.Forms.Button();
@@ -46,6 +45,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,18 +124,6 @@
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.Size = new System.Drawing.Size(198, 20);
             this.txtsearch.TabIndex = 63;
-            // 
-            // Label9
-            // 
-            this.Label9.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Label9.AutoSize = true;
-            this.Label9.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label9.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Label9.Location = new System.Drawing.Point(314, 494);
-            this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(173, 16);
-            this.Label9.TabIndex = 58;
-            this.Label9.Text = "Showing 1 to 1 out of 1 records";
             // 
             // btnlast
             // 
@@ -232,12 +222,51 @@
             this.button1.Text = "       Create a new PullOut";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label7.Location = new System.Drawing.Point(434, 495);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(13, 16);
+            this.label7.TabIndex = 88;
+            this.label7.Text = "1";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label5.Location = new System.Drawing.Point(394, 495);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(13, 16);
+            this.label5.TabIndex = 87;
+            this.label5.Text = "1";
+            // 
+            // Label9
+            // 
+            this.Label9.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Label9.AutoSize = true;
+            this.Label9.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label9.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Label9.Location = new System.Drawing.Point(335, 495);
+            this.Label9.Name = "Label9";
+            this.Label9.Size = new System.Drawing.Size(128, 16);
+            this.Label9.TabIndex = 86;
+            this.Label9.Text = "Showing          to           ";
+            // 
             // FormPullout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(800, 558);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.Label9);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.panel5);
@@ -245,7 +274,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Label6);
             this.Controls.Add(this.txtsearch);
-            this.Controls.Add(this.Label9);
             this.Controls.Add(this.btnlast);
             this.Controls.Add(this.btnnext);
             this.Controls.Add(this.btnprev);
@@ -270,7 +298,6 @@
         internal System.Windows.Forms.Label label3;
         internal System.Windows.Forms.Label Label6;
         internal System.Windows.Forms.TextBox txtsearch;
-        internal System.Windows.Forms.Label Label9;
         internal System.Windows.Forms.Button btnlast;
         internal System.Windows.Forms.Button btnnext;
         internal System.Windows.Forms.Button btnprev;
@@ -279,5 +306,8 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label5;
+        internal System.Windows.Forms.Label Label9;
     }
 }

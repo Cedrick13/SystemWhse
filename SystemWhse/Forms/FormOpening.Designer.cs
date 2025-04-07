@@ -97,7 +97,7 @@
             this.Label9.AutoSize = true;
             this.Label9.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label9.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Label9.Location = new System.Drawing.Point(334, 494);
+            this.Label9.Location = new System.Drawing.Point(335, 495);
             this.Label9.Name = "Label9";
             this.Label9.Size = new System.Drawing.Size(128, 16);
             this.Label9.TabIndex = 44;
@@ -246,7 +246,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label5.Location = new System.Drawing.Point(393, 494);
+            this.label5.Location = new System.Drawing.Point(394, 495);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(13, 16);
             this.label5.TabIndex = 82;
@@ -258,7 +258,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label7.Location = new System.Drawing.Point(433, 494);
+            this.label7.Location = new System.Drawing.Point(434, 495);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(13, 16);
             this.label7.TabIndex = 83;
