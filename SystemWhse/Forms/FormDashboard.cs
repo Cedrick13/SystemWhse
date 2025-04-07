@@ -47,6 +47,69 @@ public FormDashboard()
                 }
             }
 
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT COUNT(*) FROM rcvingdet";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                    object result = cmd.ExecuteScalar();
+                    if (result != null)
+                    {
+                        count = Convert.ToInt32(result);
+                        label5.Text = count.ToString();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT COUNT(*) FROM openingdet";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                    object result = cmd.ExecuteScalar();
+                    if (result != null)
+                    {
+                        count = Convert.ToInt32(result);
+                        label4.Text = count.ToString();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT COUNT(*) FROM pulloutdet";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                    object result = cmd.ExecuteScalar();
+                    if (result != null)
+                    {
+                        count = Convert.ToInt32(result);
+                        label7.Text = count.ToString();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+
             timer1.Start();
             label1.Text = DateTime.Now.ToLongTimeString();
             label2.Text = DateTime.Now.ToLongDateString();
@@ -66,6 +129,31 @@ public FormDashboard()
         }
 
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label5_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
