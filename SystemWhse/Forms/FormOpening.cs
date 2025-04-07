@@ -89,7 +89,7 @@ namespace SystemWhse.Forms
         }
         private void btnprev_Click(object sender, EventArgs e)
         {
-
+          
         }
 
         private void Label9_Click(object sender, EventArgs e)
@@ -105,6 +105,31 @@ namespace SystemWhse.Forms
         private void txtsearch_TextChanged(object sender, EventArgs e)
         {
            
+        }
+
+        private void btnfirst_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void navigate_records(int inc)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void btnnext_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnlast_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void select_navigation(string v)
+        {
+            throw new NotImplementedException();
         }
     }
 }
