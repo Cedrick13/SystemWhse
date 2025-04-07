@@ -9,12 +9,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using static Org.BouncyCastle.Math.EC.ECCurve;
+using System.Diagnostics;
+using System.Windows.Controls;
 
 namespace SystemWhse.Forms
 {
     public partial class FormOpening: Form
     {
         string connectionString = "server=192.168.1.230;user=Server;password=12345;database=tlcwms;";
+        private MySqlCommand command;
+        private MySqlDataAdapter adapter;
+        private DataTable table;
+        private MySqlConnection connection;
+        private string connStr;
+
         public FormOpening()
         {
             InitializeComponent();
@@ -47,7 +56,7 @@ namespace SystemWhse.Forms
                 try
                 {
                     conn.Open();
-                    string query = "SELECT itemcode,uom,custcode,itemdesc,qty_item FROM Items";
+                    string query = "SELECT custcode,itemcode,uom,itemdesc,qty_item FROM Items";
 
                     MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
                     DataTable dt = new DataTable();
@@ -91,6 +100,11 @@ namespace SystemWhse.Forms
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtsearch_TextChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }
