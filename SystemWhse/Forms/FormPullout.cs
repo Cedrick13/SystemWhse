@@ -47,7 +47,7 @@ namespace SystemWhse.Forms
                 try
                 {
                     conn.Open();
-                    string query = "SELECT custcode,itemcode,uom,descript,qty_item FROM Items";
+                    string query = "SELECT custcode,itemcode,barcode,descript,uom,type,in_stock,qty_item FROM Items";
 
                     MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
                     DataTable dt = new DataTable();
