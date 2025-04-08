@@ -36,6 +36,7 @@ namespace SystemWhse.Forms
 
         private void FormOpening_Load(object sender, EventArgs e)
         {
+            LoadData();
             LoadUserData();
             timer1.Start();
             label1.Text = DateTime.Now.ToLongTimeString();
@@ -87,6 +88,31 @@ namespace SystemWhse.Forms
                 }
             }
         }
+
+        private void LoadData()
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                string connStr = "server=192.168.1.230;user=Server;password=12345;database=tlcwms;";
+
+                // Load all data
+                string query = "SELECT * FROM items";
+                MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                dataGridView1.DataSource = table;
+
+                // Count total rows
+                string countQuery = "SELECT COUNT(*) FROM items";
+                MySqlCommand countCmd = new MySqlCommand(countQuery, conn);
+                int totalRows = Convert.ToInt32(countCmd.ExecuteScalar());
+
+                // Show total in label
+                label7.Text = $"Total Record: {totalRows}";
+            }
+        }
+
         private void btnprev_Click(object sender, EventArgs e)
         {
           
@@ -119,7 +145,7 @@ namespace SystemWhse.Forms
 
         private void btnnext_Click(object sender, EventArgs e)
         {
-           
+            
         }
 
         private void btnlast_Click(object sender, EventArgs e)
