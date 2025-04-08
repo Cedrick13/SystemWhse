@@ -27,6 +27,7 @@ namespace SystemWhse.Forms
 
         private void FormReceiving_Load(object sender, EventArgs e)
         {
+            LoadData();
             LoadUserData();
             timer1.Start();
             label1.Text = DateTime.Now.ToLongTimeString();
@@ -47,7 +48,7 @@ namespace SystemWhse.Forms
                 try
                 {
                     conn.Open();
-                    string query = "SELECT id,custcode,itemgrp,itemcode,descript,uom,type,qty_item FROM Items";
+                    string query = "SELECT custcode,itemgrp,itemcode,descript,uom,type,qty_item FROM Items";
 
                     MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
                     DataTable dt = new DataTable();
@@ -76,6 +77,30 @@ namespace SystemWhse.Forms
                 {
                     MessageBox.Show("Error loading data: " + ex.Message);
                 }
+            }
+        }
+
+        private void LoadData()
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                string connStr = "server=192.168.1.230;user=Server;password=12345;database=tlcwms;";
+
+                // Load all data
+                string query = "SELECT * FROM items";
+                MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                dataGridView1.DataSource = table;
+
+                // Count total rows
+                string countQuery = "SELECT COUNT(*) FROM items";
+                MySqlCommand countCmd = new MySqlCommand(countQuery, conn);
+                int totalRows = Convert.ToInt32(countCmd.ExecuteScalar());
+
+                // Show total in label
+                label7.Text = $"Total Record: {totalRows}";
             }
         }
     }
