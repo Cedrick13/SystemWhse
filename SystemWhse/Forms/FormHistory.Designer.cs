@@ -189,17 +189,12 @@
             // 
             this.comboBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Opening",
-            "Receiving",
-            "PullOut",
-            "Inventory",
-            "Items"});
             this.comboBox2.Location = new System.Drawing.Point(12, 48);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(159, 21);
             this.comboBox2.TabIndex = 79;
             this.comboBox2.Text = " Select";
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label11
             // 

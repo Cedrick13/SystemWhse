@@ -7,11 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace SystemWhse.Forms
 {
     public partial class FormTransfer: Form
     {
+        string connectionString = "server=192.168.1.230;user=Server;password=12345;database=tlcwms;";
+        private MySqlCommand command;
+        private MySqlDataAdapter adapter;
+        private DataTable table;
+        private MySqlConnection connection;
+        private string connStr;
+
         public FormTransfer()
         {
             InitializeComponent();
@@ -28,6 +36,11 @@ namespace SystemWhse.Forms
 
             // Proceed with cancel action
             this.Close(); // Close the form (if applicable)
+        }
+
+        private void FormTransfer_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
