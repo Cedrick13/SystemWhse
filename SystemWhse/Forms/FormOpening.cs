@@ -111,7 +111,7 @@ namespace SystemWhse.Forms
                 // Show total in label
                 label7.Text = $"Total Record: {totalRows}";
             }
-        }
+        } 
 
         private void btnprev_Click(object sender, EventArgs e)
         {
@@ -158,14 +158,14 @@ namespace SystemWhse.Forms
             throw new NotImplementedException();
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void txtSearch_TextChanged_1(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
