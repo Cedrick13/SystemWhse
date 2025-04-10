@@ -228,9 +228,6 @@
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "PRQUE",
-            "TGUIG"});
             this.comboBox3.Location = new System.Drawing.Point(222, 118);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(62, 21);
@@ -239,9 +236,6 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "BF MRTVL",
-            "TAYAG"});
             this.comboBox2.Location = new System.Drawing.Point(222, 142);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(62, 21);
@@ -250,12 +244,6 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "AA001",
-            "AA002",
-            "AA003",
-            "AA004",
-            "AA005"});
             this.comboBox1.Location = new System.Drawing.Point(222, 94);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(62, 21);

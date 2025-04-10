@@ -11,7 +11,7 @@ using MySql.Data.MySqlClient;
 
 namespace SystemWhse.Forms
 {
-    public partial class FormTransfer: Form
+    public partial class FormTransfer : Form
     {
         string connectionString = "server=192.168.1.230;user=Server;password=12345;database=tlcwms;";
         private MySqlCommand command;
@@ -40,7 +40,7 @@ namespace SystemWhse.Forms
 
         private void FormTransfer_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
