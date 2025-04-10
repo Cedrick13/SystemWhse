@@ -93,23 +93,31 @@ namespace SystemWhse.Forms
         {
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
-                conn.Open();
-                string connStr = "server=192.168.1.230;user=Server;password=12345;database=tlcwms;";
+                try
+                {
+                    conn.Open();
 
-                // Load all data
-                string query = "SELECT * FROM items";
-                MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
-                DataTable table = new DataTable();
-                adapter.Fill(table);
-                dataGridView1.DataSource = table;
+                    // Query to load data from the database
+                    string query = "SELECT * FROM items";
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
 
-                // Count total rows
-                string countQuery = "SELECT COUNT(*) FROM items";
-                MySqlCommand countCmd = new MySqlCommand(countQuery, conn);
-                int totalRows = Convert.ToInt32(countCmd.ExecuteScalar());
+                    // Bind data to the DataGridView
+                    dataGridView1.DataSource = table;
 
-                // Show total in label
-                label7.Text = $"Total Record: {totalRows}";
+                    // Count total rows
+                    string countQuery = "SELECT COUNT(*) FROM items";
+                    MySqlCommand countCmd = new MySqlCommand(countQuery, conn);
+                    int totalRows = Convert.ToInt32(countCmd.ExecuteScalar());
+
+                    // Show total in label
+                    label7.Text = $"Total Records: {totalRows}";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
             }
         } 
 
@@ -161,9 +169,15 @@ namespace SystemWhse.Forms
         private void txtSearch_TextChanged_1(object sender, EventArgs e)
         {
             string connectionString = "server=192.168.1.230;user=Server;password=12345;database=tlcwms;";
+
             using (MySqlConnection con = new MySqlConnection(connectionString))
             {
-                string query = @"
+                try
+                {
+                    con.Open();
+
+                    // Search query that filters data based on user input
+                    string query = @"
             SELECT custcode, itemcode, descript, uom, 
                    opening_qty, qty_item, active 
             FROM items 
@@ -177,17 +191,24 @@ namespace SystemWhse.Forms
                 IFNULL(active, '')
             ) LIKE @search";
 
-                using (MySqlCommand cmd = new MySqlCommand(query, con))
+                    using (MySqlCommand cmd = new MySqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@search", "%" + txtSearch.Text + "%");
+
+                        MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        // Display filtered data in DataGridView
+                        dataGridView1.DataSource = dt;
+
+                        // Display total records for search results
+                        label7.Text = $"Total Records: {dt.Rows.Count}";
+                    }
+                }
+                catch (Exception ex)
                 {
-                    cmd.Parameters.AddWithValue("@search", "%" + txtSearch.Text + "%");
-
-                    MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-
-                  //MessageBox.Show("Results found: " + dt.Rows.Count); // Debug
-
-                    dataGridView1.DataSource = dt;
+                    MessageBox.Show("Search error: " + ex.Message);
                 }
             }
         }
