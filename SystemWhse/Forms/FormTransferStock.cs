@@ -40,5 +40,16 @@ namespace SystemWhse.Forms
             //label1.Text = DateTime.Now.ToLongTimeString();
             //timer1.Start();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to back?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                return; // Exit without doing anything
+            }
+
+            // Proceed with cancel action
+            this.Close(); // Close the form (if applicable)
+        }
     }
 }
