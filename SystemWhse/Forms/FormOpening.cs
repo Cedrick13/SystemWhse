@@ -160,7 +160,36 @@ namespace SystemWhse.Forms
 
         private void txtSearch_TextChanged_1(object sender, EventArgs e)
         {
-            
+            string connectionString = "server=192.168.1.230;user=Server;password=12345;database=tlcwms;";
+            using (MySqlConnection con = new MySqlConnection(connectionString))
+            {
+                string query = @"
+            SELECT custcode, itemcode, descript, uom, 
+                   opening_qty, qty_item, active 
+            FROM items 
+            WHERE CONCAT(
+                IFNULL(custcode, ''), 
+                IFNULL(itemcode, ''), 
+                IFNULL(descript, ''), 
+                IFNULL(uom, ''), 
+                IFNULL(CAST(opening_qty AS CHAR), ''), 
+                IFNULL(CAST(qty_item AS CHAR), ''), 
+                IFNULL(active, '')
+            ) LIKE @search";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@search", "%" + txtSearch.Text + "%");
+
+                    MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                  //MessageBox.Show("Results found: " + dt.Rows.Count); // Debug
+
+                    dataGridView1.DataSource = dt;
+                }
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
