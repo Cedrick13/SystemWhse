@@ -23,6 +23,8 @@ namespace SystemWhse.Forms
         public FormTransferStock()
         {
             InitializeComponent();
+            this.Text = string.Empty;
+            this.ControlBox = false;
         }
 
         private void FormTransferStock_Load(object sender, EventArgs e)
