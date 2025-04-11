@@ -118,7 +118,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.Black;
-            this.button7.Image = global::SystemWhse.Properties.Resources.notepad;
+            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.Location = new System.Drawing.Point(0, 319);
             this.button7.Name = "button7";
@@ -134,7 +134,7 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Image = global::SystemWhse.Properties.Resources.image_8;
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.Location = new System.Drawing.Point(0, 277);
             this.button6.Name = "button6";
@@ -150,7 +150,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Image = global::SystemWhse.Properties.Resources.briefcase_04;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.Location = new System.Drawing.Point(0, 235);
             this.button5.Name = "button5";
@@ -166,7 +166,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Image = global::SystemWhse.Properties.Resources.image_7;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(0, 193);
             this.button4.Name = "button4";
@@ -182,7 +182,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Image = global::SystemWhse.Properties.Resources.image_9;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(0, 151);
             this.button3.Name = "button3";
@@ -216,7 +216,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = global::SystemWhse.Properties.Resources.apps;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(0, 67);
             this.button1.Name = "button1";
@@ -404,7 +404,7 @@
             // 
             this.transferOfStocksToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("transferOfStocksToolStripMenuItem.Image")));
             this.transferOfStocksToolStripMenuItem.Name = "transferOfStocksToolStripMenuItem";
-            this.transferOfStocksToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.transferOfStocksToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.transferOfStocksToolStripMenuItem.Text = "Transfer Of Stocks ";
             this.transferOfStocksToolStripMenuItem.Click += new System.EventHandler(this.transferOfStocksToolStripMenuItem_Click);
             // 
