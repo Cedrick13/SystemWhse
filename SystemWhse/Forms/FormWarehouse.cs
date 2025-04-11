@@ -44,5 +44,10 @@ namespace SystemWhse.Forms
             // Proceed with cancel action
             this.Close(); // Close the form (if applicable)
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            contextMenuStrip1.Show(button1,0, button1.Height);
+        }
     }
 }
