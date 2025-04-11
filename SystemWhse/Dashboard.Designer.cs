@@ -404,7 +404,7 @@
             // 
             this.transferOfStocksToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("transferOfStocksToolStripMenuItem.Image")));
             this.transferOfStocksToolStripMenuItem.Name = "transferOfStocksToolStripMenuItem";
-            this.transferOfStocksToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.transferOfStocksToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.transferOfStocksToolStripMenuItem.Text = "Transfer Of Stocks ";
             this.transferOfStocksToolStripMenuItem.Click += new System.EventHandler(this.transferOfStocksToolStripMenuItem_Click);
             // 
