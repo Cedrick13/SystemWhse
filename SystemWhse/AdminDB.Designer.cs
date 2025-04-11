@@ -31,9 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDB));
             this.Navbar = new System.Windows.Forms.ToolStrip();
             this.Menu = new System.Windows.Forms.ToolStripButton();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.returnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.transferToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
             this.lblTitle = new System.Windows.Forms.ToolStripLabel();
@@ -71,7 +68,6 @@
             this.Navbar.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.Navbar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Menu,
-            this.toolStripDropDownButton1,
             this.toolStripDropDownButton2,
             this.toolStripDropDownButton3,
             this.lblTitle,
@@ -92,33 +88,6 @@
             this.Menu.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Menu.Name = "Menu";
             this.Menu.Size = new System.Drawing.Size(23, 40);
-            // 
-            // toolStripDropDownButton1
-            // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.returnToolStripMenuItem,
-            this.transferToolStripMenuItem});
-            this.toolStripDropDownButton1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(60, 40);
-            this.toolStripDropDownButton1.Text = "General";
-            // 
-            // returnToolStripMenuItem
-            // 
-            this.returnToolStripMenuItem.Image = global::SystemWhse.Properties.Resources.return_57;
-            this.returnToolStripMenuItem.Name = "returnToolStripMenuItem";
-            this.returnToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
-            this.returnToolStripMenuItem.Text = "Return";
-            // 
-            // transferToolStripMenuItem
-            // 
-            this.transferToolStripMenuItem.Image = global::SystemWhse.Properties.Resources._876784;
-            this.transferToolStripMenuItem.Name = "transferToolStripMenuItem";
-            this.transferToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
-            this.transferToolStripMenuItem.Text = "Transfer";
             // 
             // toolStripDropDownButton2
             // 
@@ -163,7 +132,7 @@
             // 
             this.logoutToolStripMenuItem.Image = global::SystemWhse.Properties.Resources._141_1411375_logout_free_icon_3_switch_removebg_preview;
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.logoutToolStripMenuItem.Text = "Logout";
             // 
             // btnMaximize
@@ -182,7 +151,7 @@
             this.btnCloseChildForm.FlatAppearance.BorderSize = 0;
             this.btnCloseChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCloseChildForm.Image = ((System.Drawing.Image)(resources.GetObject("btnCloseChildForm.Image")));
-            this.btnCloseChildForm.Location = new System.Drawing.Point(296, 10);
+            this.btnCloseChildForm.Location = new System.Drawing.Point(235, 10);
             this.btnCloseChildForm.Name = "btnCloseChildForm";
             this.btnCloseChildForm.Size = new System.Drawing.Size(37, 23);
             this.btnCloseChildForm.TabIndex = 4;
@@ -387,8 +356,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCloseChildForm);
             this.Controls.Add(this.Navbar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminDB";
-            this.Text = "AdminDB";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Warehouse Management System | TLC ";
             this.Navbar.ResumeLayout(false);
             this.Navbar.PerformLayout();
             this.sidebar.ResumeLayout(false);
@@ -405,9 +377,6 @@
 
         private System.Windows.Forms.ToolStrip Navbar;
         private System.Windows.Forms.ToolStripButton Menu;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
-        private System.Windows.Forms.ToolStripMenuItem returnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem transferToolStripMenuItem;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton3;
         private System.Windows.Forms.ToolStripLabel lblTitle;
