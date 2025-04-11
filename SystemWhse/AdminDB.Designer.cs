@@ -258,7 +258,7 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(199, 43);
             this.button7.TabIndex = 3;
-            this.button7.Text = "Report";
+            this.button7.Text = "Location";
             this.button7.UseVisualStyleBackColor = false;
             // 
             // button6
@@ -273,7 +273,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(199, 43);
             this.button6.TabIndex = 3;
-            this.button6.Text = "History";
+            this.button6.Text = "Warehouse";
             this.button6.UseVisualStyleBackColor = true;
             // 
             // button5
@@ -288,7 +288,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(199, 43);
             this.button5.TabIndex = 3;
-            this.button5.Text = "Pullout";
+            this.button5.Text = "BIN";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button4
@@ -303,7 +303,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(199, 43);
             this.button4.TabIndex = 3;
-            this.button4.Text = "Receiving";
+            this.button4.Text = "Items";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -318,7 +318,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(199, 43);
             this.button3.TabIndex = 3;
-            this.button3.Text = "Opening";
+            this.button3.Text = "Users";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -333,7 +333,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(199, 43);
             this.button2.TabIndex = 3;
-            this.button2.Text = "Inventory";
+            this.button2.Text = "Customer";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
