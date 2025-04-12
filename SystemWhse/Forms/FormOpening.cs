@@ -199,9 +199,26 @@ namespace SystemWhse.Forms
                         DataTable dt = new DataTable();
                         da.Fill(dt);
 
+                        // Add a new column for the counter
+                        dt.Columns.Add("No", typeof(int));
+
+                        // Loop through the rows and set the counter value
+                        int counter = 1;
+                        foreach (DataRow row in dt.Rows)
+                        {
+                            row["No"] = counter++;
+                        }
+
+                        dt.Columns["No"].SetOrdinal(0);
+
                         // Display filtered data in DataGridView
                         dataGridView1.DataSource = dt;
-
+                        dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                        dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                        dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                        dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                        dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                        dataGridView1.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
                         // Display total records for search results
                         label7.Text = $"Total Records: {dt.Rows.Count}";
                     }
