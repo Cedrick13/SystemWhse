@@ -97,23 +97,31 @@ namespace SystemWhse.Forms
         {
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
-                conn.Open();
-                string connStr = "server=192.168.1.230;user=Server;password=12345;database=tlcwms;";
+                try
+                {
+                    conn.Open();
 
-                // Load all data
-                string query = "SELECT * FROM items";
-                MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
-                DataTable table = new DataTable();
-                adapter.Fill(table);
-                dataGridView1.DataSource = table;
+                    // Query to load data from the database
+                    string query = "SELECT * FROM rcvinghd";
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
 
-                // Count total rows
-                string countQuery = "SELECT COUNT(*) FROM items";
-                MySqlCommand countCmd = new MySqlCommand(countQuery, conn);
-                int totalRows = Convert.ToInt32(countCmd.ExecuteScalar());
+                    // Bind data to the DataGridView
+                    dataGridView1.DataSource = table;
 
-                // Show total in label
-                label7.Text = $"Total Record: {totalRows}";
+                    // Count total rows
+                    string countQuery = "SELECT COUNT(*) FROM rcvinghd";
+                    MySqlCommand countCmd = new MySqlCommand(countQuery, conn);
+                    int totalRows = Convert.ToInt32(countCmd.ExecuteScalar());
+
+                    // Show total in label
+                    label7.Text = $"Total Records: {totalRows}";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
             }
         }
     }
