@@ -84,7 +84,6 @@ namespace SystemWhse.Forms
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                string connStr = "server=192.168.1.230;user=Server;password=12345;database=tlcwms;";
 
                 // Load all data
                 string query = "SELECT * FROM items";
