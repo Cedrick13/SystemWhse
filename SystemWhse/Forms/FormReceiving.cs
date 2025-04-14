@@ -48,30 +48,43 @@ namespace SystemWhse.Forms
                 try
                 {
                     conn.Open();
-                    string query = "SELECT custcode,itemgrp,itemcode,descript,uom,type,qty_item FROM Items";
+                    string query = "SELECT id, rcvno, rcvdt, custcode, bl_awb, formno, status, remarks FROM rcvinghd";
 
                     MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
 
-                    // Add a new column for the counter
-                    dt.Columns.Add("No", typeof(int));
+                    // Add a new "No" column at the first position
+                    DataColumn noCol = new DataColumn("No", typeof(int));
+                    dt.Columns.Add(noCol);
+                    noCol.SetOrdinal(0); // Move to first column
 
-                    // Loop through the rows and set the counter value
-                    int counter = 1;
-                    foreach (DataRow row in dt.Rows)
+                    dataGridView1.Columns.Clear(); // clear old columns
+                    dataGridView1.DataSource = dt;
+                    dataGridView1.Columns["No"].DisplayIndex = 0;
+
+
+                    // Set counter values
+                    for (int i = 0; i < dt.Rows.Count; i++)
                     {
-                        row["No"] = counter++;
+                        dt.Rows[i]["No"] = i + 1;
                     }
 
-                    dt.Columns["No"].SetOrdinal(0);
-
+                    // Bind to DataGridView
                     dataGridView1.DataSource = dt;
 
-                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                    // Make it responsive
+                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dataGridView1.AutoResizeColumns();
 
-                    // Optionally, set specific column widths (if needed)
-                    dataGridView1.Columns["No"].Width = 80;
+                    // Optional: styling and behavior
+                    dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                    dataGridView1.MultiSelect = false;
+                    dataGridView1.ReadOnly = true;
+                    dataGridView1.AllowUserToAddRows = false;
+                    dataGridView1.AllowUserToDeleteRows = false;
+                    dataGridView1.AllowUserToOrderColumns = true;
+                    dataGridView1.AllowUserToResizeColumns = true;
                 }
                 catch (Exception ex)
                 {
