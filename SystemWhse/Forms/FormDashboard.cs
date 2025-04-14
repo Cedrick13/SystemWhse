@@ -52,7 +52,7 @@ public FormDashboard()
                 try
                 {
                     conn.Open();
-                    string query = "SELECT COUNT(*) FROM rcvingdet";
+                    string query = "SELECT COUNT(*) FROM rcvinghd";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
 
                     object result = cmd.ExecuteScalar();
@@ -73,7 +73,7 @@ public FormDashboard()
                 try
                 {
                     conn.Open();
-                    string query = "SELECT COUNT(*) FROM openingdet";
+                    string query = "SELECT COUNT(*) FROM openinghd";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
 
                     object result = cmd.ExecuteScalar();
@@ -94,7 +94,7 @@ public FormDashboard()
                 try
                 {
                     conn.Open();
-                    string query = "SELECT COUNT(*) FROM pulloutdet";
+                    string query = "SELECT COUNT(*) FROM pullouthd";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
 
                     object result = cmd.ExecuteScalar();
