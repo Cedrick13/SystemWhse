@@ -57,30 +57,43 @@ namespace SystemWhse.Forms
                 try
                 {
                     conn.Open();
-                    string query = "SELECT custcode,itemcode,descript,uom,opening_qty,qty_item,active FROM Items";
+                    string query = "SELECT id, openingno, opendt, custcode, whse, status, remarks FROM openinghd";
 
                     MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
 
-                    // Add a new column for the counter
-                    dt.Columns.Add("No", typeof(int));
+                    // Add a new "No" column at the first position
+                    DataColumn noCol = new DataColumn("No", typeof(int));
+                    dt.Columns.Add(noCol);
+                    noCol.SetOrdinal(0); // Move to first column
 
-                    // Loop through the rows and set the counter value
-                    int counter = 1;
-                    foreach (DataRow row in dt.Rows)
+                    dataGridView1.Columns.Clear(); // clear old columns
+                    dataGridView1.DataSource = dt;
+                    dataGridView1.Columns["No"].DisplayIndex = 0;
+
+
+                    // Set counter values
+                    for (int i = 0; i < dt.Rows.Count; i++)
                     {
-                        row["No"] = counter++;
+                        dt.Rows[i]["No"] = i + 1;
                     }
-                    
-                    dt.Columns["No"].SetOrdinal(0);
 
+                    // Bind to DataGridView
                     dataGridView1.DataSource = dt;
 
-                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                    // Make it responsive
+                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dataGridView1.AutoResizeColumns();
 
-                    // Optionally, set specific column widths (if needed)
-                    dataGridView1.Columns["No"].Width = 80;
+                    // Optional: styling and behavior
+                    dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                    dataGridView1.MultiSelect = false;
+                    dataGridView1.ReadOnly = true;
+                    dataGridView1.AllowUserToAddRows = false;
+                    dataGridView1.AllowUserToDeleteRows = false;
+                    dataGridView1.AllowUserToOrderColumns = true;
+                    dataGridView1.AllowUserToResizeColumns = true;
                 }
                 catch (Exception ex)
                 {
@@ -98,7 +111,7 @@ namespace SystemWhse.Forms
                     conn.Open();
 
                     // Query to load data from the database
-                    string query = "SELECT * FROM items";
+                    string query = "SELECT * FROM openinghd";
                     MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
                     DataTable table = new DataTable();
                     adapter.Fill(table);
@@ -107,7 +120,7 @@ namespace SystemWhse.Forms
                     dataGridView1.DataSource = table;
 
                     // Count total rows
-                    string countQuery = "SELECT COUNT(*) FROM items";
+                    string countQuery = "SELECT COUNT(*) FROM openinghd";
                     MySqlCommand countCmd = new MySqlCommand(countQuery, conn);
                     int totalRows = Convert.ToInt32(countCmd.ExecuteScalar());
 
@@ -178,17 +191,17 @@ namespace SystemWhse.Forms
 
                     // Search query that filters data based on user input
                     string query = @"
-            SELECT custcode, itemcode, descript, uom, 
-                   opening_qty, qty_item, active 
-            FROM items 
+            SELECT id, openingno, opendt, custcode, 
+                   whse, status, remarks
+            FROM openinghd 
             WHERE CONCAT(
+                IFNULL(id, ''), 
+                IFNULL(openingno, ''), 
+                IFNULL(opendt, ''), 
                 IFNULL(custcode, ''), 
-                IFNULL(itemcode, ''), 
-                IFNULL(descript, ''), 
-                IFNULL(uom, ''), 
-                IFNULL(CAST(opening_qty AS CHAR), ''), 
-                IFNULL(CAST(qty_item AS CHAR), ''), 
-                IFNULL(active, '')
+                IFNULL(CAST(whse AS CHAR), ''), 
+                IFNULL(CAST(status AS CHAR), ''), 
+                IFNULL(remarks, '')
             ) LIKE @search";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, con))
