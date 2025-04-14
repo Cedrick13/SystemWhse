@@ -35,7 +35,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Label6 = new System.Windows.Forms.Label();
-            this.txtsearch = new System.Windows.Forms.TextBox();
             this.btnlast = new System.Windows.Forms.Button();
             this.btnnext = new System.Windows.Forms.Button();
             this.btnprev = new System.Windows.Forms.Button();
@@ -47,6 +46,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.Label9 = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,15 +115,6 @@
             this.Label6.Size = new System.Drawing.Size(51, 16);
             this.Label6.TabIndex = 75;
             this.Label6.Text = "Search :";
-            // 
-            // txtsearch
-            // 
-            this.txtsearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtsearch.Location = new System.Drawing.Point(590, 48);
-            this.txtsearch.Name = "txtsearch";
-            this.txtsearch.Size = new System.Drawing.Size(198, 20);
-            this.txtsearch.TabIndex = 74;
             // 
             // btnlast
             // 
@@ -253,12 +244,21 @@
             this.Label9.TabIndex = 89;
             this.Label9.Text = "Showing          to           ";
             // 
+            // txtSearch
+            // 
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearch.Location = new System.Drawing.Point(590, 48);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(198, 20);
+            this.txtSearch.TabIndex = 92;
+            // 
             // FormHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(800, 558);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Label9);
@@ -268,7 +268,6 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Label6);
-            this.Controls.Add(this.txtsearch);
             this.Controls.Add(this.btnlast);
             this.Controls.Add(this.btnnext);
             this.Controls.Add(this.btnprev);
@@ -292,7 +291,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         internal System.Windows.Forms.Label label3;
         internal System.Windows.Forms.Label Label6;
-        internal System.Windows.Forms.TextBox txtsearch;
         internal System.Windows.Forms.Button btnlast;
         internal System.Windows.Forms.Button btnnext;
         internal System.Windows.Forms.Button btnprev;
@@ -304,5 +302,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         internal System.Windows.Forms.Label Label9;
+        private System.Windows.Forms.TextBox txtSearch;
     }
 }

@@ -34,12 +34,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Label6 = new System.Windows.Forms.Label();
-            this.txtsearch = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,15 +81,6 @@
             this.Label6.Size = new System.Drawing.Size(51, 16);
             this.Label6.TabIndex = 64;
             this.Label6.Text = "Search :";
-            // 
-            // txtsearch
-            // 
-            this.txtsearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtsearch.Location = new System.Drawing.Point(590, 48);
-            this.txtsearch.Name = "txtsearch";
-            this.txtsearch.Size = new System.Drawing.Size(198, 20);
-            this.txtsearch.TabIndex = 63;
             // 
             // dataGridView1
             // 
@@ -152,18 +143,26 @@
             this.label7.TabIndex = 88;
             this.label7.Text = "1";
             // 
+            // txtSearch
+            // 
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearch.Location = new System.Drawing.Point(590, 48);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(198, 20);
+            this.txtSearch.TabIndex = 89;
+            // 
             // FormPullout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(800, 558);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.Label6);
-            this.Controls.Add(this.txtsearch);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -181,11 +180,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;
         internal System.Windows.Forms.Label Label6;
-        internal System.Windows.Forms.TextBox txtsearch;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtSearch;
     }
 }
