@@ -124,5 +124,70 @@ namespace SystemWhse.Forms
                 }
             }
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            string connectionString = "server=192.168.1.230;user=Server;password=12345;database=tlcwms;";
+
+            using (MySqlConnection con = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    con.Open();
+
+                    // Search query that filters data based on user input
+                    string query = @"
+SELECT id, rcvno, rcvdt, custcode, 
+       bl_awb, formno, status, remarks
+FROM rcvinghd 
+WHERE CONCAT(
+    IFNULL(id, ''), 
+    IFNULL(rcvno, ''), 
+    IFNULL(rcvdt, ''), 
+    IFNULL(custcode, ''), 
+    IFNULL(CAST(bl_awb AS CHAR), ''), 
+    IFNULL(CAST(formno AS CHAR), ''),
+    IFNULL(CAST(status AS CHAR), ''),
+    IFNULL(remarks, '')
+) LIKE @search";
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@search", "%" + txtSearch.Text + "%");
+
+                        MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        // Add a new column for the counter
+                        dt.Columns.Add("No", typeof(int));
+
+                        // Loop through the rows and set the counter value
+                        int counter = 1;
+                        foreach (DataRow row in dt.Rows)
+                        {
+                            row["No"] = counter++;
+                        }
+
+                        dt.Columns["No"].SetOrdinal(0);
+
+                        // Display filtered data in DataGridView
+                        dataGridView1.DataSource = dt;
+                        dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                        dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                        dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                        dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                        dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                        dataGridView1.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                        // Display total records for search results
+                        label7.Text = $"Total Records: {dt.Rows.Count}";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Search error: " + ex.Message);
+                }
+            }
+        }
     }
 }
