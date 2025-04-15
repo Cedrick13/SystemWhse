@@ -22,6 +22,8 @@ namespace SystemWhse.Forms
         public FormAddOpening()
         {
             InitializeComponent();
+            this.Text = string.Empty;
+            this.ControlBox = false;
         }
     }
 }
