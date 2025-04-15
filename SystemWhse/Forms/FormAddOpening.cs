@@ -63,6 +63,26 @@ namespace SystemWhse.Forms
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT binno FROM bin";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        comboBox3.Items.Add(reader.GetString("binno"));
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
         }
     }
 }
