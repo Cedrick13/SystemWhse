@@ -85,25 +85,25 @@ namespace SystemWhse.Forms
                 }
             }
 
-            /*using (MySqlConnection conn = new MySqlConnection(connectionString))
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 try
                 {
                     conn.Open();
-                    string query = "SELECT locname FROM location";
+                    string query = "SELECT loccode FROM location";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     MySqlDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())
                     {
-                        comboBox2.Items.Add(reader.GetString("locname"));
+                        comboBox2.Items.Add(reader.GetString("loccode"));
                     }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error: " + ex.Message);
                 }
-            }*/
+            }
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
