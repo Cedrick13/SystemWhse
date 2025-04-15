@@ -250,7 +250,19 @@ namespace SystemWhse.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
+            FormAddOpening form2 = new FormAddOpening();
 
+            // Disable Form1 while Form2 is open
+            this.Enabled = false;
+
+            // Show Form2 as modal
+            form2.ShowDialog();
+
+            // Re-enable Form1 after Form2 closes
+            this.Enabled = true;
+
+            // Bring Form1 back to front
+            this.BringToFront();
         }
     }
 }
