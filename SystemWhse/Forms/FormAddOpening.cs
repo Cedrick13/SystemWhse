@@ -11,7 +11,7 @@ using MySql.Data.MySqlClient;
 
 namespace SystemWhse.Forms
 {
-    public partial class FormAddOpening: Form
+    public partial class FormAddOpening : Form
     {
         string connectionString = "server=192.168.1.230;user=Server;password=12345;database=tlcwms;";
         private MySqlCommand command;
@@ -19,6 +19,7 @@ namespace SystemWhse.Forms
         private DataTable table;
         private MySqlConnection connection;
         private string connStr;
+        Dictionary<string, string> customerMap = new Dictionary<string, string>();
         public FormAddOpening()
         {
             InitializeComponent();
@@ -109,13 +110,17 @@ namespace SystemWhse.Forms
                 try
                 {
                     conn.Open();
-                    string query = "SELECT custcode FROM customer";
+                    string query = "SELECT custcode, name FROM customer";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     MySqlDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())
                     {
-                        comboBox4.Items.Add(reader.GetString("custcode"));
+                        string code = reader.GetString("custcode");
+                        string name = reader.GetString("name");
+
+                        comboBox4.Items.Add(code); // still show code in comboBox
+                        customerMap[code] = name;  // map code to name
                     }
                 }
                 catch (Exception ex)
@@ -123,6 +128,20 @@ namespace SystemWhse.Forms
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
+
+            comboBox4.SelectedIndexChanged += comboBox4_SelectedIndexChanged;
+            textBox3.Enabled = false;
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedCode = comboBox4.SelectedItem.ToString();
+
+            if (customerMap.ContainsKey(selectedCode))
+            {
+                textBox3.Text = customerMap[selectedCode]; // Display the customer name
+            }
         }
     }
 }
+
