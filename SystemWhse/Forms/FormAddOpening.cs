@@ -50,14 +50,22 @@ namespace SystemWhse.Forms
                 try
                 {
                     conn.Open();
-                    string query = "SELECT whsecode FROM warehouse";
+                    string query = "SELECT whsecode, whsename FROM warehouse";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     MySqlDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())
                     {
-                        comboBox1.Items.Add(reader.GetString("whsecode"));
+                        comboBox1.Items.Add(new Warehouse
+                        {
+                            Code = reader.GetString("whsecode"),
+                            Name = reader.GetString("whsename")
+                        });
                     }
+
+                    // Set draw mode to owner draw
+                    comboBox1.DrawMode = DrawMode.OwnerDrawFixed;
+                    comboBox1.DrawItem += comboBox1_DrawItem;
                 }
                 catch (Exception ex)
                 {
@@ -70,14 +78,22 @@ namespace SystemWhse.Forms
                 try
                 {
                     conn.Open();
-                    string query = "SELECT binno FROM bin";
+                    string query = "SELECT binno, binname FROM bin";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     MySqlDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())
                     {
-                        comboBox3.Items.Add(reader.GetString("binno"));
+                        comboBox3.Items.Add(new Warehouse
+                        {
+                            Code = reader.GetString("binno"),
+                            Name = reader.GetString("binname")
+                        });
                     }
+
+                    // Set draw mode to owner draw
+                    comboBox3.DrawMode = DrawMode.OwnerDrawFixed;
+                    comboBox3.DrawItem += comboBox3_DrawItem;
                 }
                 catch (Exception ex)
                 {
@@ -90,14 +106,22 @@ namespace SystemWhse.Forms
                 try
                 {
                     conn.Open();
-                    string query = "SELECT loccode FROM location";
+                    string query = "SELECT loccode, locname FROM location";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     MySqlDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())
                     {
-                        comboBox2.Items.Add(reader.GetString("loccode"));
+                        comboBox2.Items.Add(new Warehouse
+                        {
+                            Code = reader.GetString("loccode"),
+                            Name = reader.GetString("locname")
+                        });
                     }
+
+                    // Set draw mode to owner draw
+                    comboBox2.DrawMode = DrawMode.OwnerDrawFixed;
+                    comboBox2.DrawItem += comboBox2_DrawItem;
                 }
                 catch (Exception ex)
                 {
@@ -140,6 +164,100 @@ namespace SystemWhse.Forms
             if (customerMap.ContainsKey(selectedCode))
             {
                 textBox3.Text = customerMap[selectedCode]; // Display the customer name
+            }
+        }
+        private void comboBox1_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) return;
+
+            e.DrawBackground();
+
+            var warehouse = comboBox1.Items[e.Index] as Warehouse;
+            if (warehouse != null)
+            {
+                string displayText = $"{warehouse.Code.PadRight(10)} {warehouse.Name}";
+
+                using (SolidBrush brush = new SolidBrush(e.ForeColor))
+                {
+                    e.Graphics.DrawString(displayText, e.Font, brush, e.Bounds);
+                }
+            }
+
+            e.DrawFocusRectangle();
+        }
+        public class Warehouse
+        {
+            public string Code { get; set; }
+            public string Name { get; set; }
+
+            // What gets shown after selection
+            public override string ToString()
+            {
+                return Code;
+            }
+        }
+
+        private void comboBox2_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) return;
+
+            e.DrawBackground();
+
+            var location = comboBox2.Items[e.Index] as Warehouse;
+            if (location != null)
+            {
+                string displayText = $"{location.Code.PadRight(10)} {location.Name}";
+
+                using (SolidBrush brush = new SolidBrush(e.ForeColor))
+                {
+                    e.Graphics.DrawString(displayText, e.Font, brush, e.Bounds);
+                }
+            }
+
+            e.DrawFocusRectangle();
+        }
+
+        public class location
+        {
+            public string Code { get; set; }
+            public string Name { get; set; }
+
+            // What gets shown after selection
+            public override string ToString()
+            {
+                return Code;
+            }
+        }
+
+        private void comboBox3_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) return;
+
+            e.DrawBackground();
+
+            var bin = comboBox3.Items[e.Index] as Warehouse;
+            if (bin != null)
+            {
+                string displayText = $"{bin.Code.PadRight(10)} {bin.Name}";
+
+                using (SolidBrush brush = new SolidBrush(e.ForeColor))
+                {
+                    e.Graphics.DrawString(displayText, e.Font, brush, e.Bounds);
+                }
+            }
+
+            e.DrawFocusRectangle();
+        }
+
+        public class bin
+        {
+            public string Code { get; set; }
+            public string Name { get; set; }
+
+            // What gets shown after selection
+            public override string ToString()
+            {
+                return Code;
             }
         }
     }
