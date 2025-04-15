@@ -168,6 +168,12 @@
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormAddOpening.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddOpening.Designer.cs">
+      <DependentUpon>FormAddOpening.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAddOpening.resx">
+      <DependentUpon>FormAddOpening.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormDashboard.resx">
       <DependentUpon>FormDashboard.cs</DependentUpon>
