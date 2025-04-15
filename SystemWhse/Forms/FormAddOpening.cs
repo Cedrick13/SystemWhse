@@ -36,5 +36,33 @@ namespace SystemWhse.Forms
             // Proceed with cancel action
             this.Close(); // Close the form (if applicable)
         }
+
+        private void FormAddOpening_Load(object sender, EventArgs e)
+        {
+            LoadComboBoxData();
+        }
+
+        private void LoadComboBoxData()
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT whsecode FROM warehouse";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        comboBox1.Items.Add(reader.GetString("whsecode"));
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
     }
 }
