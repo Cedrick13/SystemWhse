@@ -24,6 +24,13 @@ namespace SystemWhse.Forms
             InitializeComponent();
             this.Text = string.Empty;
             this.ControlBox = false;
+            textBox1.Enabled = false;
+            textBox3.Enabled = false;
+            textBox4.Enabled = false;
+            textBox5.Enabled = false;
+            textBox8.Enabled = false;
+            textBox7.Enabled = false;
+            textBox6.Enabled = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
