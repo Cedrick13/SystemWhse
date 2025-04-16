@@ -105,13 +105,13 @@ namespace SystemWhse.Forms
                 }
             }
 
+            textBox1.Enabled = false;
             textBox3.Enabled = false;
-            textBox3.Enabled = false;
-            textBox3.Enabled = false;
-            textBox3.Enabled = false;
-            textBox3.Enabled = false;
-            textBox3.Enabled = false;
-            textBox3.Enabled = false;
+            textBox4.Enabled = false;
+            textBox5.Enabled = false;
+            textBox8.Enabled = false;
+            textBox7.Enabled = false;
+            textBox6.Enabled = false;
         }
     }
 }
