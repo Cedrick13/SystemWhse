@@ -533,6 +533,7 @@
             this.Name = "FormAddReceiving";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create New Receiving";
+            this.Load += new System.EventHandler(this.FormAddReceiving_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
