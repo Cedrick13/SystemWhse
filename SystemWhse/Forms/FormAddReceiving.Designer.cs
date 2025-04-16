@@ -343,9 +343,9 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 25);
+            this.label1.Size = new System.Drawing.Size(204, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Receiving Stocks";
+            this.label1.Text = "Create New Receiving";
             // 
             // dataGridView1
             // 

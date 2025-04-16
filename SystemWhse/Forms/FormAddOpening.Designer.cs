@@ -47,6 +47,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -60,7 +61,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -280,6 +280,14 @@
             this.panel3.Size = new System.Drawing.Size(296, 142);
             this.panel3.TabIndex = 18;
             // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(99, 7);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(179, 21);
+            this.comboBox4.TabIndex = 33;
+            // 
             // pictureBox6
             // 
             this.pictureBox6.Image = global::SystemWhse.Properties.Resources.asterisk_371;
@@ -350,9 +358,9 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 25);
+            this.label1.Size = new System.Drawing.Size(196, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Opening Stocks";
+            this.label1.Text = "Create New Opening";
             // 
             // panel2
             // 
@@ -410,14 +418,6 @@
             this.label11.Size = new System.Drawing.Size(64, 17);
             this.label11.TabIndex = 20;
             this.label11.Text = "Remarks:";
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(99, 7);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(179, 21);
-            this.comboBox4.TabIndex = 33;
             // 
             // FormAddOpening
             // 
