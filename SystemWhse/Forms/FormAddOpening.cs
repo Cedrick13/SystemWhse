@@ -155,6 +155,7 @@ namespace SystemWhse.Forms
 
             comboBox4.SelectedIndexChanged += comboBox4_SelectedIndexChanged;
             textBox3.Enabled = false;
+            textBox5.Enabled = false;
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
